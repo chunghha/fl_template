@@ -1,21 +1,14 @@
-name: fl_template
+## Freezed Classes
 
-packages:
-  - packages/**
+To demonstrate converting of API responses in JSON to **[freezed](https://pub.dev/packages/freezed)** model classes, we're going to use [jsonplaceholder](https://jsonplaceholder.typicode.com/) user API as an example.
 
-scripts:
-  analyze:
-    run: |
-      melos exec -c 1 -- \
-        flutter analyze .
-    description: |
-      Run `dart analyze` in all packages.
-       - Note: you can also rely on your IDEs Dart Analysis / Issues window.
+To define the [user](https://jsonplaceholder.typicode.com/users) type in the API as freezed model classes in Dart, 
 
-  format:
-    run: dart format -o write  --show all .
-    description: Format all the code in this project.
+- Create **model** dart files into the *packages/model* folder. *Please refer them in the folder including how to export with the barrel files.*
 
+- Add following melos scripts to generate the model classes with [build_runner](https://pub.dev/packages/build_runner):
+  
+```yaml
   generate:
     run: melos run generate:dart && melos run generate:flutter
     description: Build all generated files for Dart & Flutter packages in this project.
@@ -27,7 +20,23 @@ scripts:
   generate:flutter:
     run: melos exec -c 1 --depends-on="build_runner" --flutter -- "flutter pub run build_runner build --delete-conflicting-outputs"
     description: Build all generated files for Flutter packages in this project.
+```
 
+### Run the script to generate freezed model classes with **melos**:
+```bash
+melos run generate:dart
+```
+
+![melos run generate](../screenshots/03_freezed_classes.png)
+
+### Run the test from vscode and with **melos**:
+
+- Test with VSCode:
+![freezed vscode test](../screenshots/03_freezed_classes_vscode.png)
+
+- Add following melos scripts to test the model classes with **melos**.
+
+```yaml
   test:
     run: melos run test:dart --no-select && melos run test:flutter --no-select && melos run test:genhtml_lcov
     description: Run all Dart & Flutter tests in this project.
@@ -56,15 +65,11 @@ scripts:
     select-package:
       flutter: true
       dir-exists: test
+```
 
-  check:all:
-    run: melos run analyze && melos run format && melos run generate && melos run test
-    description: Check all packages in this project.
 
-  outdated:
-    run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter pub outdated && exit"
-    description: Run `flutter pub outdated` in all packages.
+```bash
+melos run test
+```
 
-  upgrade:
-    run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter pub upgrade && exit"
-    description: Run `flutter pub upgrade` in all packages.
+![melos run test](../screenshots/03_freezed_classes_test.png)
