@@ -1,0 +1,24 @@
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.mocks.dart"
+    - "**/generated_plugin_registrant.dart"
+  errors:
+    fixme: ignore
+    hack: ignore
+    todo: ignore
+linter:
+  rules:
+    newline-before-return: true
+    no-boolean-literal-compare: true
+    no-empty-block: true
+    no-equal-then-else: true
+    prefer-conditional-expressions: true
+    prefer_const_constructors: false
+    prefer_final_locals: true
+    prefer_relative_imports: true
+    prefer_single_quotes: true
+    public_member_api_docs: false
+    require_trailing_commas: true
