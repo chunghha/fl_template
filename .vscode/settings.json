@@ -1,0 +1,13 @@
+{
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": "active",
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.fixAll"
+    ],
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}
