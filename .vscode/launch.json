@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flutter Dev",
+            "type": "dart",
+            "request": "launch",
+            "program": "packages/ui/lib/main_dev.dart"
+        },
+        {
+            "name": "Flutter QA",
+            "type": "dart",
+            "request": "launch",
+            "program": "packages/ui/lib/main_qa.dart",
+            "args": [
+              "--flavor",
+              "qa"
+            ]
+        },
+        {
+            "name": "Flutter Prod",
+            "type": "dart",
+            "request": "launch",
+            "program": "packages/ui/lib/main_prod.dart"
+        },
+        {
+          "name": "Golden",
+          "request": "launch",
+          "type": "dart",
+          "codeLens": {
+            "for": ["run-test", "run-test-file"]
+          },
+          "args": ["--update-goldens"]
+        }
+    ]
+}
