@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 const double defaultElevation = 4;
+const double defaultIconSize = 24;
 const double defaultOffset = 16;
 const double defaultPadding = 16;
 const double defaultRadius = 16;
@@ -28,5 +29,18 @@ final highlightInactiveColor = Color(0xFF211f2d);
 final highlightOverlayColor = Color(0xFF3a384a);
 
 // text styles
-final TextStyle defaultTextStyle =
-    GoogleFonts.roboto(color: textColor, fontSize: 14);
+final TextStyle defaultTextStyle = GoogleFonts.roboto(
+  color: textColor,
+  fontSize: 14,
+);
+
+final TextStyle baseHeaderStyle = GoogleFonts.montserrat(
+  color: surfaceColor,
+  fontSize: 14,
+  fontWeight: FontWeight.w700,
+);
+
+final TextStyle baseTextStyle = GoogleFonts.roboto(
+  color: baseColor,
+  fontSize: 14,
+);
