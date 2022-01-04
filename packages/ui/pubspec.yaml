@@ -14,9 +14,10 @@ dependencies:
   adapter:
     path: ../adapter
   animations: ^2.0.2
+  basic_utils: ^3.9.2
   cached_network_image: ^3.2.0
   cupertino_icons: ^1.0.4
-  device_info_plus: ^3.2.0
+  device_info_plus: ^3.2.1
   email_validator: ^2.0.1
   equatable: ^2.0.3
   fl_chart: ^0.40.6

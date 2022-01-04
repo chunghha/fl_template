@@ -1,4 +1,6 @@
-# Flutter app template - WIP
+# Flutter app template - alpha
+
+**Please review and feedback to Discussions.**
 
 ## Template app's multi packages with **melos**
 ### Melos Setup 
@@ -20,3 +22,6 @@
 
 ### Flutter Hooks / Riverpod
 - [06_Hooks_Riverpod](./markdowns/06_hooks_and_riverpod.md)
+
+### Go_Router
+- [07_Go_Router](./markdowns/07_go_router.md)
