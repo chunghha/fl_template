@@ -1,5 +1,6 @@
-import 'main.dart' as _app;
+import 'main.dart' as app;
 
 void main() {
-  _app.main(env: 'qa');
+  // ignore: avoid_redundant_argument_values
+  app.main(env: 'qa');
 }

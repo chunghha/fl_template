@@ -9,7 +9,7 @@ import '../states/current_page.state.dart';
 String _getSubloc(String path) {
   // * this logic required by that nested routes not configured with '/'
   // * in the enum, however, router path should start with '/' at runtime.
-  return path.startsWith('/') ? path : '/' + path;
+  return path.startsWith('/') ? path : '/$path';
 }
 
 void goBack({
@@ -26,18 +26,18 @@ void goByPath({
   required WidgetRef ref,
   required String path,
 }) {
-  final _locations = path.split('/');
-  int _key = 0;
-  CURRENT_PAGE.values.asMap().forEach((_k, _v) {
+  final locations = path.split('/');
+  var key = 0;
+  CURRENT_PAGE.values.asMap().forEach((k, v) {
     // * find out which entry has the path to match with
-    if (_v.toPath().substring(1) == _locations[1]) {
-      _key = _k;
+    if (v.toPath().substring(1) == locations[1]) {
+      key = k;
     }
   });
 
   ref
       .read(currentPagePod.notifier)
-      .update(CurrentPageState(CURRENT_PAGE.values[_key], path));
+      .update(CurrentPageState(CURRENT_PAGE.values[key], path));
   context.go(_getSubloc(path));
 }
 
@@ -48,12 +48,12 @@ void goForward({
   List<String>? subPaths,
 }) {
   // * subloc should start with '/' for nested routes as well
-  var _path = _getSubloc(pageToGo.toPath());
+  var path = _getSubloc(pageToGo.toPath());
 
   if (subPaths != null && subPaths.isNotEmpty) {
-    subPaths.fold(_path, (_p, _e) => _path += '/' + _e);
+    subPaths.fold(path, (_, entry) => path += '/$entry');
   }
 
-  ref.read(currentPagePod.notifier).update(CurrentPageState(pageToGo, _path));
-  context.go(_path);
+  ref.read(currentPagePod.notifier).update(CurrentPageState(pageToGo, path));
+  context.go(path);
 }

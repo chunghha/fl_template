@@ -10,5 +10,6 @@ final tokenStateNotifierPod =
 class TokenStateNotifier extends StateNotifier<TokenState> {
   TokenStateNotifier() : super(getTokenData());
 
+  // ignore: use_setters_to_change_properties
   void change(TokenState token) => state = token;
 }

@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
 
 class LoginUserViewModel extends Equatable {
+  const LoginUserViewModel({required this.accessToken, required this.email});
+
   final String accessToken;
   final String email;
-
-  const LoginUserViewModel({required this.accessToken, required this.email});
 
   @override
   List<Object> get props => [accessToken, email];

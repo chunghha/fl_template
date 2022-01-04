@@ -12,17 +12,17 @@ Future main({String? env = 'qa'}) async {
   registerFonts();
   await initializeConfiguration(env);
 
-  runApp(ProviderScope(child: const TemplateApp()));
+  runApp(const ProviderScope(child: TemplateApp()));
 }
 
 class TemplateApp extends ConsumerStatefulWidget {
   const TemplateApp({Key? key}) : super(key: key);
 
   @override
-  _PagesAppState createState() => _PagesAppState();
+  PagesAppState createState() => PagesAppState();
 }
 
-class _PagesAppState extends ConsumerState<TemplateApp> with RestorationMixin {
+class PagesAppState extends ConsumerState<TemplateApp> with RestorationMixin {
   @override
   String get restorationId => 'wrapper';
 
@@ -41,9 +41,9 @@ class _PagesAppState extends ConsumerState<TemplateApp> with RestorationMixin {
   void initState() {
     super.initState();
     // * use ref.read() in the widget life-cycle methods
-    final _authStateProvider = ref.read(authStateNotifierPod);
+    final authStateProvider = ref.read(authStateNotifierPod);
     if (kDebugMode) {
-      print('|.. authState: $_authStateProvider');
+      print('|.. authState: $authStateProvider');
     }
   }
 

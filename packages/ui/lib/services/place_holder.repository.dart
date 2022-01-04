@@ -3,25 +3,24 @@ import 'package:dio/dio.dart';
 import 'package:model/model.dart';
 
 class PlaceHolderRepository {
-  late final String baseUrl;
-
   PlaceHolderRepository({required this.baseUrl});
 
+  late final String baseUrl;
+
   Future<List<UserResponseModel>> getUsers() async {
-    final _placeHolderAdapter = PlaceHolderAdapter(
+    final placeHolderAdapter = PlaceHolderAdapter(
       baseUrl: baseUrl,
     );
 
     try {
-      final List<UserResponseModel> _users = [];
-      final List<dynamic> _res =
-          ((await _placeHolderAdapter.getUsers()).data) as List;
+      final users = <UserResponseModel>[];
+      final res = (await placeHolderAdapter.getUsers()).data as List;
 
-      for (var _r in _res) {
-        _users.add(UserResponseModel.fromJson(_r));
+      for (final user in res) {
+        users.add(UserResponseModel.fromJson(user as Map<String, Object?>));
       }
 
-      return _users;
+      return users;
     } on DioError catch (dioError) {
       throw AdapterException.fromDioError(dioError);
     }

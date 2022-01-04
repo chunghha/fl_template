@@ -14,16 +14,15 @@ class LoginPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _tokenProvider = ref.watch(tokenStateNotifierPod);
+    final tokenProvider = ref.watch(tokenStateNotifierPod);
 
-    final _emailController =
+    final emailController =
         useTextEditingController(text: 'test@fake_test.com');
-    final _passwordController =
-        useTextEditingController(text: 'yourPassIsOkay');
-    final _tokenController =
-        useTextEditingController(text: _tokenProvider.accessToken);
+    final passwordController = useTextEditingController(text: 'yourPassIsOkay');
+    final tokenController =
+        useTextEditingController(text: tokenProvider.accessToken);
 
-    final _formMaxWidth =
+    final formMaxWidth =
         MediaQuery.of(context).size.width - (defaultPadding * 3);
 
     return Scaffold(
@@ -44,25 +43,25 @@ class LoginPage extends HookConsumerWidget {
                         children: [
                           Center(
                             child: Container(
-                              padding: EdgeInsets.all(defaultPadding / 2),
+                              padding: const EdgeInsets.all(defaultPadding / 2),
                               constraints:
-                                  BoxConstraints(maxWidth: _formMaxWidth),
+                                  BoxConstraints(maxWidth: formMaxWidth),
                               child: Wrap(
                                 spacing: defaultPadding,
                                 runSpacing: defaultPadding,
                                 alignment: WrapAlignment.center,
                                 children: [
-                                  EmailInput(controller: _emailController),
+                                  EmailInput(controller: emailController),
                                   PasswordInput(
-                                    controller: _passwordController,
+                                    controller: passwordController,
                                   ),
-                                  TokenInput(controller: _tokenController),
+                                  TokenInput(controller: tokenController),
                                   LoginButton(
-                                    emailController: _emailController,
-                                    passwordController: _passwordController,
-                                    tokenController: _tokenController,
+                                    emailController: emailController,
+                                    passwordController: passwordController,
+                                    tokenController: tokenController,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: defaultPadding / 8,
                                   )
                                 ],

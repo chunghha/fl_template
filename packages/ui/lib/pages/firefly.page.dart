@@ -13,21 +13,22 @@ class FireflyPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _numbers = useState(0.0);
+    // ignore: prefer_int_literals
+    final numbers = useState(0.0);
 
-    final _controller = useAnimationController();
+    final controller = useAnimationController();
 
     // just a trick here
     // TODO: firefly should fly its own.
     useEffect(
       () {
-        var _ticks = 0;
+        var ticks = 0;
 
         final timer = Timer.periodic(const Duration(milliseconds: 200), (time) {
-          _ticks++;
+          ticks++;
 
-          final _r = (_ticks / 100).remainder(2);
-          _numbers.value = _r < 1 ? _numbers.value + 1.0 : _numbers.value - 1.0;
+          final r = (ticks / 100).remainder(2);
+          numbers.value = r < 1 ? numbers.value + 1.0 : numbers.value - 1.0;
         });
         return timer.cancel;
       },
@@ -46,11 +47,11 @@ class FireflyPage extends HookWidget {
           children: <Widget>[
             Expanded(
               child: AnimatedBuilder(
-                animation: _controller,
+                animation: controller,
                 builder: (context, snapshot) {
                   return CustomPaint(
                     painter: FireFlyPainter(
-                      _numbers.value.toInt(),
+                      numbers.value.toInt(),
                     ),
                     child: Container(),
                   );
@@ -58,15 +59,15 @@ class FireflyPage extends HookWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 24.0),
+              padding: EdgeInsets.only(left: 24),
             ),
             Slider(
-              value: _numbers.value,
-              min: -1.0,
-              max: 100.0,
-              label: _numbers.value.toInt().toString(),
+              value: numbers.value,
+              min: -1,
+              max: 100,
+              label: numbers.value.toInt().toString(),
               divisions: 100,
-              onChanged: (value) => _numbers.value = value,
+              onChanged: (value) => numbers.value = value,
             ),
           ],
         ),
@@ -77,48 +78,47 @@ class FireflyPage extends HookWidget {
 
 // For painting fireflies
 class FireFlyPainter extends CustomPainter {
-  final int numbers;
-
   FireFlyPainter(this.numbers);
+
+  final int numbers;
 
   @override
   void paint(Canvas canvas, Size size) {
-    for (int i = 0; i < numbers; i++) {
-      final _offset = Offset(
+    for (var i = 0; i < numbers; i++) {
+      final offset = Offset(
         Random().nextInt(size.width.floor() - 1) + 0.5,
         Random().nextInt(size.height.floor() - 1) + 0.5,
       );
-      final _radius = Random().nextInt(30) + 5.0;
+      final radius = Random().nextInt(30) + 5.0;
 
-      final _path = Path();
-      _path.addOval(Rect.fromCircle(center: _offset, radius: _radius));
+      final path = Path();
+      path.addOval(Rect.fromCircle(center: offset, radius: radius));
 
-      final _opacity = (Random().nextInt(8) + 2) / 10;
-      final Color _color = Colors
-          .primaries[Random().nextInt(Colors.primaries.length)]
-          .withOpacity(_opacity);
+      final opacity = (Random().nextInt(8) + 2) / 10;
+      final color = Colors.primaries[Random().nextInt(Colors.primaries.length)]
+          .withOpacity(opacity);
 
-      final _paint = Paint()
-        ..color = _color
+      final paint = Paint()
+        ..color = color
         ..style = PaintingStyle.fill
         ..strokeCap = StrokeCap.round;
-      canvas.drawPath(_path, _paint);
+      canvas.drawPath(path, paint);
 
-      _paint.style = PaintingStyle.stroke;
-      _paint.strokeWidth = 2.0;
-      _paint.blendMode = BlendMode.colorDodge;
+      paint.style = PaintingStyle.stroke;
+      paint.strokeWidth = 2.0;
+      paint.blendMode = BlendMode.colorDodge;
 
-      _path.moveTo(
+      path.moveTo(
         Random().nextInt(size.width.floor() - 1) + 0.5,
         Random().nextInt(size.height.floor() - 1) + 0.5,
       );
-      _path.quadraticBezierTo(
+      path.quadraticBezierTo(
         Random().nextInt(size.width.floor() - 1) + 0.5,
         Random().nextInt(size.height.floor() - 1) + 0.5,
         Random().nextInt(size.width.floor() - 1) + 0.5,
         Random().nextInt(size.height.floor() - 1) + 0.5,
       );
-      canvas.drawPath(_path, _paint);
+      canvas.drawPath(path, paint);
     }
   }
 

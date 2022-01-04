@@ -1,5 +1,5 @@
-import 'main.dart' as _app;
+import 'main.dart' as app;
 
 void main() {
-  _app.main(env: 'dev');
+  app.main(env: 'dev');
 }

@@ -1,6 +1,7 @@
 import 'package:basic_utils/basic_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:theme/theme.dart';
 
 import '../constants/current_page.enum.dart';
 import '../shared/my_scaffold.dart';
@@ -8,8 +9,6 @@ import '../shared/my_scaffold.dart';
 class ErrorPage extends StatelessWidget {
   const ErrorPage(this.error, {Key? key}) : super(key: key);
   final Exception? error;
-
-  get surfaceColor => null;
 
   @override
   Widget build(BuildContext context) => MyScaffold(

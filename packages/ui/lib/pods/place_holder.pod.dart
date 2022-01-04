@@ -14,7 +14,7 @@ final placeHolderRepoPod = Provider(
 );
 
 Future<List<UserResponseModel>> _getUsers(FutureProviderRef ref) async {
-  final _placeHolderRepository = ref.watch(placeHolderRepoPod);
+  final placeHolderRepository = ref.watch(placeHolderRepoPod);
 
-  return await _placeHolderRepository.getUsers();
+  return placeHolderRepository.getUsers();
 }

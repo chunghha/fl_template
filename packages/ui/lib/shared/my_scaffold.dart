@@ -3,13 +3,7 @@ import 'package:flutter/material.dart';
 import 'my_navigator.dart';
 
 class MyScaffold extends StatelessWidget {
-  late final PreferredSizeWidget appBar;
-  late final Widget body;
-  late final Widget? floatingActionButton;
-  late final Color? backgroundColor;
-
-  // ignore: prefer_const_constructors_in_immutables
-  MyScaffold({
+  const MyScaffold({
     Key? key,
     required this.appBar,
     required this.body,
@@ -17,13 +11,18 @@ class MyScaffold extends StatelessWidget {
     this.backgroundColor,
   }) : super(key: key);
 
+  final PreferredSizeWidget appBar;
+  final Widget body;
+  final Widget? floatingActionButton;
+  final Color? backgroundColor;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar,
       backgroundColor: backgroundColor,
       body: body,
-      bottomNavigationBar: MyNavigator(),
+      bottomNavigationBar: const MyNavigator(),
       floatingActionButton: floatingActionButton,
     );
   }

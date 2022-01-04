@@ -6,13 +6,13 @@ extension CurrentPageExtension on CURRENT_PAGE {
   Icon toIcon() {
     switch (this) {
       case CURRENT_PAGE.counter:
-        return Icon(Icons.home);
+        return const Icon(Icons.home);
       case CURRENT_PAGE.firefly:
-        return Icon(Icons.fireplace);
+        return const Icon(Icons.fireplace);
       case CURRENT_PAGE.userlist:
-        return Icon(Icons.people);
+        return const Icon(Icons.people);
       case CURRENT_PAGE.login:
-        return Icon(Icons.login);
+        return const Icon(Icons.login);
     }
   }
 

@@ -7,16 +7,16 @@ import '../pods/auth.pod.dart';
 import '../shared/router.helper.dart';
 
 class LoginButton extends HookConsumerWidget {
-  final TextEditingController emailController;
-  final TextEditingController passwordController;
-  final TextEditingController tokenController;
-
   const LoginButton({
     Key? key,
     required this.emailController,
     required this.passwordController,
     required this.tokenController,
   }) : super(key: key);
+
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final TextEditingController tokenController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,12 +33,12 @@ class LoginButton extends HookConsumerWidget {
 
           goForward(context: context, ref: ref, pageToGo: CURRENT_PAGE.counter);
         },
-        child: Text(
-          'LOG IN',
-        ),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(defaultPadding),
+          padding: const EdgeInsets.all(defaultPadding),
           primary: pineColor,
+        ),
+        child: const Text(
+          'LOG IN',
         ),
       ),
     );

@@ -12,7 +12,7 @@ class UserListPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _users = ref.watch(usersPod);
+    final users = ref.watch(usersPod);
 
     return MyScaffold(
       backgroundColor: surfaceColor,
@@ -20,12 +20,12 @@ class UserListPage extends ConsumerWidget {
         backgroundColor: overlayColor,
         title: Text(CURRENT_PAGE.userlist.toTitle()),
       ),
-      body: _users.when(
-        data: (_d) => UserListView(_d),
-        loading: () => Center(
+      body: users.when(
+        data: UserListView.new,
+        loading: () => const Center(
           child: CircularProgressIndicator(),
         ),
-        error: (_e, _s) => Text('Error: $_e'),
+        error: (e, s) => Text('Error: $e'),
       ),
     );
   }

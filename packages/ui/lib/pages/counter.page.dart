@@ -11,7 +11,7 @@ class CounterPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _counter = useState(0);
+    final counter = useState(0);
 
     return MyScaffold(
       backgroundColor: surfaceColor,
@@ -27,13 +27,13 @@ class CounterPage extends HookWidget {
               'You have pushed the button this many times:',
             ),
             Text(
-              '${_counter.value}',
+              '${counter.value}',
               style: Theme.of(context).textTheme.headline4,
             ),
-            Gap(defaultPadding),
+            const Gap(defaultPadding),
             TextButton(
               onPressed: () {
-                _counter.value++;
+                counter.value++;
               },
               child: Icon(
                 Icons.plus_one,

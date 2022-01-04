@@ -22,17 +22,17 @@ class CurrentPageNotifier extends StateNotifier<List<CurrentPageState>> {
 
   List<CurrentPageState> remove() {
     // * remove last entry to go back
-    final List<CurrentPageState> _state = state;
-    _state.remove(_state.last);
+    final pages = state;
+    pages.remove(pages.last);
 
-    return _state;
+    return pages;
   }
 
-  List<CurrentPageState> update(CurrentPageState newState) {
+  List<CurrentPageState> update(CurrentPageState newPage) {
     // * add newState to go as current entry to the state
-    final List<CurrentPageState> _state = state;
-    _state.add(newState);
+    final pages = state;
+    pages.add(newPage);
 
-    return _state;
+    return pages;
   }
 }
