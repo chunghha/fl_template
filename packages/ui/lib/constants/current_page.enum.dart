@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 enum CURRENT_PAGE { counter, firefly, userlist, login }
 
 extension CurrentPageExtension on CURRENT_PAGE {
