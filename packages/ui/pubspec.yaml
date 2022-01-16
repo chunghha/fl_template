@@ -24,7 +24,7 @@ dependencies:
   flutter_hooks: ^0.18.2
   flutter_secure_storage: ^5.0.2
   gap: ^2.0.0
-  go_router: ^2.5.7
+  go_router: ^3.0.1
   golden_toolkit: ^0.12.0
   hooks_riverpod: ^1.0.3
   intl: ^0.17.0
@@ -32,7 +32,7 @@ dependencies:
   model:
     path: ../model
   package_info_plus: ^1.2.1
-  shared_preferences: ^2.0.11
+  shared_preferences: ^2.0.12
   theme:
     path: ../theme
   url_launcher: ^6.0.17
