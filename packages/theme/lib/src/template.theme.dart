@@ -29,18 +29,25 @@ final highlightInactiveColor = Color(0xFF211f2d);
 final highlightOverlayColor = Color(0xFF3a384a);
 
 // text styles
-final TextStyle defaultTextStyle = GoogleFonts.roboto(
+const textStyleFontPkg = TextStyle(package: 'theme');
+
+final TextStyle defaultTextStyle = GoogleFonts.ibmPlexSans(
   color: textColor,
   fontSize: 14,
+  fontWeight: FontWeight.normal,
+  textStyle: textStyleFontPkg,
 );
 
-final TextStyle baseHeaderStyle = GoogleFonts.montserrat(
+final TextStyle baseHeaderStyle = GoogleFonts.ibmPlexSerif(
   color: surfaceColor,
   fontSize: 14,
-  fontWeight: FontWeight.w700,
+  fontWeight: FontWeight.bold,
+  textStyle: textStyleFontPkg,
 );
 
-final TextStyle baseTextStyle = GoogleFonts.roboto(
+final TextStyle baseTextStyle = GoogleFonts.ibmPlexSans(
   color: baseColor,
   fontSize: 14,
+  fontWeight: FontWeight.normal,
+  textStyle: textStyleFontPkg,
 );
