@@ -28,6 +28,10 @@ scripts:
     run: melos exec -c 1 --depends-on="build_runner" --flutter -- "flutter pub run build_runner build --delete-conflicting-outputs"
     description: Build all generated files for Flutter packages in this project.
 
+  generate:launcher_icon:
+    run: melos exec --file-exists="flutter_launcher_icons.yaml" -c 1 --depends-on="flutter_launcher_icons" --flutter -- "flutter pub run flutter_launcher_icons:main"
+    description: Generate launcher icons for this project.
+
   test:
     run: melos run test:dart --no-select && melos run test:flutter --no-select && melos run test:genhtml_lcov
     description: Run all Dart & Flutter tests in this project.

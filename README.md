@@ -32,3 +32,9 @@ This repo is to provide a flutter app template for datacentric apps with backend
 
 ### Go_Router
 - [07_Go_Router](./markdowns/07_go_router.md)
+
+### Launcher Icon
+- Just run this melos task once a launcher icon(**launcher.png**) placed into ui package's "**assets/icons**".
+```bash
+melos run generate:launcher_icon
+```

@@ -40,7 +40,10 @@ dependencies:
 dev_dependencies:
   all_lint_rules_community: ^0.0.7
   build_runner: ^2.1.7
-  flutter_launcher_icons: ^0.9.2
+  flutter_launcher_icons:
+    git:
+      url: https://github.com/RatakondalaArun/flutter_launcher_icons.git
+      ref: fix/flutter-v2.8.0-support-321
   flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
