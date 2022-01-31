@@ -1,5 +1,8 @@
+// ignore_for_file: noop_primitive_operations
+
 import 'dart:async';
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -49,11 +52,28 @@ class FireflyPage extends HookWidget {
               child: AnimatedBuilder(
                 animation: controller,
                 builder: (context, snapshot) {
-                  return CustomPaint(
-                    painter: FireFlyPainter(
-                      numbers.value.toInt(),
+                  return ColoredBox(
+                    color: loveColor,
+                    child: ClipRect(
+                      child: BackdropFilter(
+                        filter: ImageFilter.compose(
+                          outer: ImageFilter.blur(
+                            sigmaX: numbers.value.toDouble(),
+                            sigmaY: numbers.value.toDouble() * 2,
+                          ),
+                          inner: ColorFilter.mode(
+                            pineColor,
+                            BlendMode.overlay,
+                          ),
+                        ),
+                        child: CustomPaint(
+                          painter: FireFlyPainter(
+                            numbers.value.toInt(),
+                          ),
+                          child: Container(),
+                        ),
+                      ),
                     ),
-                    child: Container(),
                   );
                 },
               ),
