@@ -35,7 +35,7 @@ class CounterPage extends HookWidget {
               onPressed: () {
                 counter.value++;
               },
-              child: Icon(
+              child: const Icon(
                 Icons.plus_one,
                 color: loveColor,
                 size: defaultIconSize,

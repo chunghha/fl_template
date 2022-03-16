@@ -61,7 +61,7 @@ class FireflyPage extends HookWidget {
                             sigmaX: numbers.value.toDouble(),
                             sigmaY: numbers.value.toDouble() * 2,
                           ),
-                          inner: ColorFilter.mode(
+                          inner: const ColorFilter.mode(
                             pineColor,
                             BlendMode.overlay,
                           ),
