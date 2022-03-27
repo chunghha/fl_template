@@ -51,3 +51,4 @@ packages/**/coverage.lcov
 # package build
 packages/**/build
 packages/model/coverage.lcov
+packages/model/coverage/**/*.vm.json

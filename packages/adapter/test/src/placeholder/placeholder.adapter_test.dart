@@ -10,14 +10,14 @@ void main() {
   const _endpoint = '/users';
   const _users = '''
     [
-      { 
+      {
         "id": 1,
         "name": "Leanne Graham"
       }
     ]
   ''';
 
-  group('place holder.aapter, ', () {
+  group('place holder.adapter, ', () {
     late DioAdapter dioAdapter;
 
     setUpAll(() {
