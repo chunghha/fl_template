@@ -12,7 +12,7 @@ class UserCompanyModel with _$UserCompanyModel {
   }) = _UserCompanyModel;
 
   factory UserCompanyModel.fromJson(
-    Map<String, Object?> json,
+    Map<String, dynamic> json,
   ) =>
       _$UserCompanyModelFromJson(json);
 }

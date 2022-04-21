@@ -11,7 +11,7 @@ class UserGeoModel with _$UserGeoModel {
   }) = _UserGeoModel;
 
   factory UserGeoModel.fromJson(
-    Map<String, Object?> json,
+    Map<String, dynamic> json,
   ) =>
       _$UserGeoModelFromJson(json);
 }

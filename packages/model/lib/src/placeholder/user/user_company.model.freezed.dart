@@ -12,31 +12,11 @@ part of 'user_company.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserCompanyModel _$UserCompanyModelFromJson(Map<String, dynamic> json) {
   return _UserCompanyModel.fromJson(json);
 }
-
-/// @nodoc
-class _$UserCompanyModelTearOff {
-  const _$UserCompanyModelTearOff();
-
-  _UserCompanyModel call({String? name, String? catchPhrase, String? bs}) {
-    return _UserCompanyModel(
-      name: name,
-      catchPhrase: catchPhrase,
-      bs: bs,
-    );
-  }
-
-  UserCompanyModel fromJson(Map<String, Object?> json) {
-    return UserCompanyModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserCompanyModel = _$UserCompanyModelTearOff();
 
 /// @nodoc
 mixin _$UserCompanyModel {
@@ -165,6 +145,7 @@ class _$_UserCompanyModel implements _UserCompanyModel {
             const DeepCollectionEquality().equals(other.bs, bs));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -184,18 +165,20 @@ class _$_UserCompanyModel implements _UserCompanyModel {
 }
 
 abstract class _UserCompanyModel implements UserCompanyModel {
-  factory _UserCompanyModel({String? name, String? catchPhrase, String? bs}) =
-      _$_UserCompanyModel;
+  factory _UserCompanyModel(
+      {final String? name,
+      final String? catchPhrase,
+      final String? bs}) = _$_UserCompanyModel;
 
   factory _UserCompanyModel.fromJson(Map<String, dynamic> json) =
       _$_UserCompanyModel.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get catchPhrase;
+  String? get catchPhrase => throw _privateConstructorUsedError;
   @override
-  String? get bs;
+  String? get bs => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCompanyModelCopyWith<_UserCompanyModel> get copyWith =>

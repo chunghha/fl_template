@@ -16,7 +16,7 @@ class UserAddressModel with _$UserAddressModel {
   }) = _UserAddressModel;
 
   factory UserAddressModel.fromJson(
-    Map<String, Object?> json,
+    Map<String, dynamic> json,
   ) =>
       _$UserAddressModelFromJson(json);
 }

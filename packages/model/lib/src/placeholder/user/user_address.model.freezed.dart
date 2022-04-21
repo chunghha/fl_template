@@ -12,38 +12,11 @@ part of 'user_address.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserAddressModel _$UserAddressModelFromJson(Map<String, dynamic> json) {
   return _UserAddressModel.fromJson(json);
 }
-
-/// @nodoc
-class _$UserAddressModelTearOff {
-  const _$UserAddressModelTearOff();
-
-  _UserAddressModel call(
-      {String? street,
-      String? suite,
-      String? city,
-      String? zip,
-      UserGeoModel? geo}) {
-    return _UserAddressModel(
-      street: street,
-      suite: suite,
-      city: city,
-      zip: zip,
-      geo: geo,
-    );
-  }
-
-  UserAddressModel fromJson(Map<String, Object?> json) {
-    return UserAddressModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserAddressModel = _$UserAddressModelTearOff();
 
 /// @nodoc
 mixin _$UserAddressModel {
@@ -225,6 +198,7 @@ class _$_UserAddressModel implements _UserAddressModel {
             const DeepCollectionEquality().equals(other.geo, geo));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -247,25 +221,25 @@ class _$_UserAddressModel implements _UserAddressModel {
 
 abstract class _UserAddressModel implements UserAddressModel {
   factory _UserAddressModel(
-      {String? street,
-      String? suite,
-      String? city,
-      String? zip,
-      UserGeoModel? geo}) = _$_UserAddressModel;
+      {final String? street,
+      final String? suite,
+      final String? city,
+      final String? zip,
+      final UserGeoModel? geo}) = _$_UserAddressModel;
 
   factory _UserAddressModel.fromJson(Map<String, dynamic> json) =
       _$_UserAddressModel.fromJson;
 
   @override
-  String? get street;
+  String? get street => throw _privateConstructorUsedError;
   @override
-  String? get suite;
+  String? get suite => throw _privateConstructorUsedError;
   @override
-  String? get city;
+  String? get city => throw _privateConstructorUsedError;
   @override
-  String? get zip;
+  String? get zip => throw _privateConstructorUsedError;
   @override
-  UserGeoModel? get geo;
+  UserGeoModel? get geo => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserAddressModelCopyWith<_UserAddressModel> get copyWith =>

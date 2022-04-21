@@ -22,7 +22,7 @@ class UserResponseModel with _$UserResponseModel {
   }) = _UserResponseModel;
 
   factory UserResponseModel.fromJson(
-    Map<String, Object?> json,
+    Map<String, dynamic> json,
   ) =>
       _$UserResponseModelFromJson(json);
 }

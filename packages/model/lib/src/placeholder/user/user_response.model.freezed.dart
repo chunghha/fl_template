@@ -12,44 +12,11 @@ part of 'user_response.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserResponseModel _$UserResponseModelFromJson(Map<String, dynamic> json) {
   return _UserResponseModel.fromJson(json);
 }
-
-/// @nodoc
-class _$UserResponseModelTearOff {
-  const _$UserResponseModelTearOff();
-
-  _UserResponseModel call(
-      {int? id,
-      String? name,
-      String? username,
-      String? email,
-      UserAddressModel? address,
-      String? phone,
-      String? website,
-      UserCompanyModel? compaany}) {
-    return _UserResponseModel(
-      id: id,
-      name: name,
-      username: username,
-      email: email,
-      address: address,
-      phone: phone,
-      website: website,
-      compaany: compaany,
-    );
-  }
-
-  UserResponseModel fromJson(Map<String, Object?> json) {
-    return UserResponseModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserResponseModel = _$UserResponseModelTearOff();
 
 /// @nodoc
 mixin _$UserResponseModel {
@@ -301,6 +268,7 @@ class _$_UserResponseModel implements _UserResponseModel {
             const DeepCollectionEquality().equals(other.compaany, compaany));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -326,34 +294,34 @@ class _$_UserResponseModel implements _UserResponseModel {
 
 abstract class _UserResponseModel implements UserResponseModel {
   factory _UserResponseModel(
-      {int? id,
-      String? name,
-      String? username,
-      String? email,
-      UserAddressModel? address,
-      String? phone,
-      String? website,
-      UserCompanyModel? compaany}) = _$_UserResponseModel;
+      {final int? id,
+      final String? name,
+      final String? username,
+      final String? email,
+      final UserAddressModel? address,
+      final String? phone,
+      final String? website,
+      final UserCompanyModel? compaany}) = _$_UserResponseModel;
 
   factory _UserResponseModel.fromJson(Map<String, dynamic> json) =
       _$_UserResponseModel.fromJson;
 
   @override
-  int? get id;
+  int? get id => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get username;
+  String? get username => throw _privateConstructorUsedError;
   @override
-  String? get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  UserAddressModel? get address;
+  UserAddressModel? get address => throw _privateConstructorUsedError;
   @override
-  String? get phone;
+  String? get phone => throw _privateConstructorUsedError;
   @override
-  String? get website;
+  String? get website => throw _privateConstructorUsedError;
   @override
-  UserCompanyModel? get compaany;
+  UserCompanyModel? get compaany => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserResponseModelCopyWith<_UserResponseModel> get copyWith =>

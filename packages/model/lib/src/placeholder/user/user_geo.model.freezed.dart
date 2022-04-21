@@ -12,30 +12,11 @@ part of 'user_geo.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserGeoModel _$UserGeoModelFromJson(Map<String, dynamic> json) {
   return _UserGeoModel.fromJson(json);
 }
-
-/// @nodoc
-class _$UserGeoModelTearOff {
-  const _$UserGeoModelTearOff();
-
-  _UserGeoModel call({String? lat, String? lng}) {
-    return _UserGeoModel(
-      lat: lat,
-      lng: lng,
-    );
-  }
-
-  UserGeoModel fromJson(Map<String, Object?> json) {
-    return UserGeoModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserGeoModel = _$UserGeoModelTearOff();
 
 /// @nodoc
 mixin _$UserGeoModel {
@@ -147,6 +128,7 @@ class _$_UserGeoModel implements _UserGeoModel {
             const DeepCollectionEquality().equals(other.lng, lng));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -165,15 +147,16 @@ class _$_UserGeoModel implements _UserGeoModel {
 }
 
 abstract class _UserGeoModel implements UserGeoModel {
-  factory _UserGeoModel({String? lat, String? lng}) = _$_UserGeoModel;
+  factory _UserGeoModel({final String? lat, final String? lng}) =
+      _$_UserGeoModel;
 
   factory _UserGeoModel.fromJson(Map<String, dynamic> json) =
       _$_UserGeoModel.fromJson;
 
   @override
-  String? get lat;
+  String? get lat => throw _privateConstructorUsedError;
   @override
-  String? get lng;
+  String? get lng => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserGeoModelCopyWith<_UserGeoModel> get copyWith =>
