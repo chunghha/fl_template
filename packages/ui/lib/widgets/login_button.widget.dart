@@ -8,11 +8,11 @@ import '../shared/router.helper.dart';
 
 class LoginButton extends HookConsumerWidget {
   const LoginButton({
-    Key? key,
+    super.key,
     required this.emailController,
     required this.passwordController,
     required this.tokenController,
-  }) : super(key: key);
+  });
 
   final TextEditingController emailController;
   final TextEditingController passwordController;

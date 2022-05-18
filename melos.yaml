@@ -62,7 +62,7 @@ scripts:
       dir-exists: test
 
   check:all:
-    run: melos run analyze && melos run format && melos run generate && melos run test
+    run: melos run clean:ui && melos run analyze && melos run format && melos run generate && melos run test
     description: Check all packages in this project.
 
   outdated:
@@ -72,3 +72,17 @@ scripts:
   upgrade:
     run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter pub upgrade && exit"
     description: Run `flutter pub upgrade` in all packages.
+
+  clean:
+    run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter clean"
+    description: Run `flutter clean' for ios release to delete the build/ and .dart_tool/ directories.
+    select-package:
+      flutter: true
+      dir-exists: build
+
+  clean:ui:
+    run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter clean"
+    description: Run `flutter clean' for ios release to delete the build/ and .dart_tool/ directories.
+    select-package:
+      flutter: true
+      dir-exists: assets/config/

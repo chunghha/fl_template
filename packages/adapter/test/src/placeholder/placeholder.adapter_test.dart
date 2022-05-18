@@ -7,8 +7,8 @@ import 'package:http_mock_adapter/http_mock_adapter.dart';
 
 void main() {
   late Dio dio;
-  const _endpoint = '/users';
-  const _users = '''
+  const endpoint = '/users';
+  const users = '''
     [
       {
         "id": 1,
@@ -27,21 +27,21 @@ void main() {
 
     test('place holder adapter when getUsers() is called ...', () async {
       dioAdapter.onGet(
-        _endpoint,
-        (request) => request.reply(200, _users),
+        endpoint,
+        (request) => request.reply(200, users),
       );
 
       // run
-      final _placeHolderAdapter = PlaceHolderAdapter(
+      final placeHolderAdapter = PlaceHolderAdapter(
         baseUrl: '',
         dio: dio,
       );
 
-      final _responded = await _placeHolderAdapter.getUsers();
-      final List<dynamic> _parsed = jsonDecode(_responded.toString());
+      final responded = await placeHolderAdapter.getUsers();
+      final List<dynamic> parsed = jsonDecode(responded.toString());
 
       // assert
-      expect(_parsed.first['id'], 1);
+      expect(parsed.first['id'], 1);
     });
   });
 }

@@ -16,7 +16,7 @@ Future main({String? env = 'qa'}) async {
 }
 
 class TemplateApp extends ConsumerStatefulWidget {
-  const TemplateApp({Key? key}) : super(key: key);
+  const TemplateApp({super.key});
 
   @override
   PagesAppState createState() => PagesAppState();

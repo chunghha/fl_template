@@ -4,12 +4,12 @@ import 'my_navigator.dart';
 
 class MyScaffold extends StatelessWidget {
   const MyScaffold({
-    Key? key,
+    super.key,
     required this.appBar,
     required this.body,
     this.floatingActionButton,
     this.backgroundColor,
-  }) : super(key: key);
+  });
 
   final PreferredSizeWidget appBar;
   final Widget body;

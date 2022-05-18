@@ -12,7 +12,7 @@ import '../constants/current_page.enum.dart';
 import '../shared/my_scaffold.dart';
 
 class FireflyPage extends HookWidget {
-  const FireflyPage({Key? key}) : super(key: key);
+  const FireflyPage({super.key});
 
   @override
   Widget build(BuildContext context) {

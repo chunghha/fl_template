@@ -101,11 +101,11 @@ class _$UserAddressModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UserAddressModelCopyWith<$Res>
+abstract class _$$_UserAddressModelCopyWith<$Res>
     implements $UserAddressModelCopyWith<$Res> {
-  factory _$UserAddressModelCopyWith(
-          _UserAddressModel value, $Res Function(_UserAddressModel) then) =
-      __$UserAddressModelCopyWithImpl<$Res>;
+  factory _$$_UserAddressModelCopyWith(
+          _$_UserAddressModel value, $Res Function(_$_UserAddressModel) then) =
+      __$$_UserAddressModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? street,
@@ -119,15 +119,15 @@ abstract class _$UserAddressModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$UserAddressModelCopyWithImpl<$Res>
+class __$$_UserAddressModelCopyWithImpl<$Res>
     extends _$UserAddressModelCopyWithImpl<$Res>
-    implements _$UserAddressModelCopyWith<$Res> {
-  __$UserAddressModelCopyWithImpl(
-      _UserAddressModel _value, $Res Function(_UserAddressModel) _then)
-      : super(_value, (v) => _then(v as _UserAddressModel));
+    implements _$$_UserAddressModelCopyWith<$Res> {
+  __$$_UserAddressModelCopyWithImpl(
+      _$_UserAddressModel _value, $Res Function(_$_UserAddressModel) _then)
+      : super(_value, (v) => _then(v as _$_UserAddressModel));
 
   @override
-  _UserAddressModel get _value => super._value as _UserAddressModel;
+  _$_UserAddressModel get _value => super._value as _$_UserAddressModel;
 
   @override
   $Res call({
@@ -137,7 +137,7 @@ class __$UserAddressModelCopyWithImpl<$Res>
     Object? zip = freezed,
     Object? geo = freezed,
   }) {
-    return _then(_UserAddressModel(
+    return _then(_$_UserAddressModel(
       street: street == freezed
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
@@ -190,7 +190,7 @@ class _$_UserAddressModel implements _UserAddressModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserAddressModel &&
+            other is _$_UserAddressModel &&
             const DeepCollectionEquality().equals(other.street, street) &&
             const DeepCollectionEquality().equals(other.suite, suite) &&
             const DeepCollectionEquality().equals(other.city, city) &&
@@ -210,8 +210,8 @@ class _$_UserAddressModel implements _UserAddressModel {
 
   @JsonKey(ignore: true)
   @override
-  _$UserAddressModelCopyWith<_UserAddressModel> get copyWith =>
-      __$UserAddressModelCopyWithImpl<_UserAddressModel>(this, _$identity);
+  _$$_UserAddressModelCopyWith<_$_UserAddressModel> get copyWith =>
+      __$$_UserAddressModelCopyWithImpl<_$_UserAddressModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -242,6 +242,6 @@ abstract class _UserAddressModel implements UserAddressModel {
   UserGeoModel? get geo => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserAddressModelCopyWith<_UserAddressModel> get copyWith =>
+  _$$_UserAddressModelCopyWith<_$_UserAddressModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

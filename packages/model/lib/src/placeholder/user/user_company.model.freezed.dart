@@ -71,25 +71,25 @@ class _$UserCompanyModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UserCompanyModelCopyWith<$Res>
+abstract class _$$_UserCompanyModelCopyWith<$Res>
     implements $UserCompanyModelCopyWith<$Res> {
-  factory _$UserCompanyModelCopyWith(
-          _UserCompanyModel value, $Res Function(_UserCompanyModel) then) =
-      __$UserCompanyModelCopyWithImpl<$Res>;
+  factory _$$_UserCompanyModelCopyWith(
+          _$_UserCompanyModel value, $Res Function(_$_UserCompanyModel) then) =
+      __$$_UserCompanyModelCopyWithImpl<$Res>;
   @override
   $Res call({String? name, String? catchPhrase, String? bs});
 }
 
 /// @nodoc
-class __$UserCompanyModelCopyWithImpl<$Res>
+class __$$_UserCompanyModelCopyWithImpl<$Res>
     extends _$UserCompanyModelCopyWithImpl<$Res>
-    implements _$UserCompanyModelCopyWith<$Res> {
-  __$UserCompanyModelCopyWithImpl(
-      _UserCompanyModel _value, $Res Function(_UserCompanyModel) _then)
-      : super(_value, (v) => _then(v as _UserCompanyModel));
+    implements _$$_UserCompanyModelCopyWith<$Res> {
+  __$$_UserCompanyModelCopyWithImpl(
+      _$_UserCompanyModel _value, $Res Function(_$_UserCompanyModel) _then)
+      : super(_value, (v) => _then(v as _$_UserCompanyModel));
 
   @override
-  _UserCompanyModel get _value => super._value as _UserCompanyModel;
+  _$_UserCompanyModel get _value => super._value as _$_UserCompanyModel;
 
   @override
   $Res call({
@@ -97,7 +97,7 @@ class __$UserCompanyModelCopyWithImpl<$Res>
     Object? catchPhrase = freezed,
     Object? bs = freezed,
   }) {
-    return _then(_UserCompanyModel(
+    return _then(_$_UserCompanyModel(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -138,7 +138,7 @@ class _$_UserCompanyModel implements _UserCompanyModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserCompanyModel &&
+            other is _$_UserCompanyModel &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.catchPhrase, catchPhrase) &&
@@ -155,8 +155,8 @@ class _$_UserCompanyModel implements _UserCompanyModel {
 
   @JsonKey(ignore: true)
   @override
-  _$UserCompanyModelCopyWith<_UserCompanyModel> get copyWith =>
-      __$UserCompanyModelCopyWithImpl<_UserCompanyModel>(this, _$identity);
+  _$$_UserCompanyModelCopyWith<_$_UserCompanyModel> get copyWith =>
+      __$$_UserCompanyModelCopyWithImpl<_$_UserCompanyModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -181,6 +181,6 @@ abstract class _UserCompanyModel implements UserCompanyModel {
   String? get bs => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserCompanyModelCopyWith<_UserCompanyModel> get copyWith =>
+  _$$_UserCompanyModelCopyWith<_$_UserCompanyModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

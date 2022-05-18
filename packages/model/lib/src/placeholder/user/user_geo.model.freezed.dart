@@ -64,31 +64,32 @@ class _$UserGeoModelCopyWithImpl<$Res> implements $UserGeoModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UserGeoModelCopyWith<$Res>
+abstract class _$$_UserGeoModelCopyWith<$Res>
     implements $UserGeoModelCopyWith<$Res> {
-  factory _$UserGeoModelCopyWith(
-          _UserGeoModel value, $Res Function(_UserGeoModel) then) =
-      __$UserGeoModelCopyWithImpl<$Res>;
+  factory _$$_UserGeoModelCopyWith(
+          _$_UserGeoModel value, $Res Function(_$_UserGeoModel) then) =
+      __$$_UserGeoModelCopyWithImpl<$Res>;
   @override
   $Res call({String? lat, String? lng});
 }
 
 /// @nodoc
-class __$UserGeoModelCopyWithImpl<$Res> extends _$UserGeoModelCopyWithImpl<$Res>
-    implements _$UserGeoModelCopyWith<$Res> {
-  __$UserGeoModelCopyWithImpl(
-      _UserGeoModel _value, $Res Function(_UserGeoModel) _then)
-      : super(_value, (v) => _then(v as _UserGeoModel));
+class __$$_UserGeoModelCopyWithImpl<$Res>
+    extends _$UserGeoModelCopyWithImpl<$Res>
+    implements _$$_UserGeoModelCopyWith<$Res> {
+  __$$_UserGeoModelCopyWithImpl(
+      _$_UserGeoModel _value, $Res Function(_$_UserGeoModel) _then)
+      : super(_value, (v) => _then(v as _$_UserGeoModel));
 
   @override
-  _UserGeoModel get _value => super._value as _UserGeoModel;
+  _$_UserGeoModel get _value => super._value as _$_UserGeoModel;
 
   @override
   $Res call({
     Object? lat = freezed,
     Object? lng = freezed,
   }) {
-    return _then(_UserGeoModel(
+    return _then(_$_UserGeoModel(
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
@@ -123,7 +124,7 @@ class _$_UserGeoModel implements _UserGeoModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserGeoModel &&
+            other is _$_UserGeoModel &&
             const DeepCollectionEquality().equals(other.lat, lat) &&
             const DeepCollectionEquality().equals(other.lng, lng));
   }
@@ -137,8 +138,8 @@ class _$_UserGeoModel implements _UserGeoModel {
 
   @JsonKey(ignore: true)
   @override
-  _$UserGeoModelCopyWith<_UserGeoModel> get copyWith =>
-      __$UserGeoModelCopyWithImpl<_UserGeoModel>(this, _$identity);
+  _$$_UserGeoModelCopyWith<_$_UserGeoModel> get copyWith =>
+      __$$_UserGeoModelCopyWithImpl<_$_UserGeoModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -159,6 +160,6 @@ abstract class _UserGeoModel implements UserGeoModel {
   String? get lng => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserGeoModelCopyWith<_UserGeoModel> get copyWith =>
+  _$$_UserGeoModelCopyWith<_$_UserGeoModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

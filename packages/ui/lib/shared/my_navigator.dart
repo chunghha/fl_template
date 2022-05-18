@@ -11,7 +11,7 @@ import '../states/current_page.state.dart';
 import 'router.helper.dart';
 
 class MyNavigator extends ConsumerWidget {
-  const MyNavigator({Key? key}) : super(key: key);
+  const MyNavigator({super.key});
 
   List<BottomNavigationBarItem> _navbarItems() {
     final items = <BottomNavigationBarItem>[];

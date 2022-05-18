@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TokenInput extends StatelessWidget {
-  const TokenInput({Key? key, required this.controller}) : super(key: key);
+  const TokenInput({super.key, required this.controller});
 
   final TextEditingController controller;
 

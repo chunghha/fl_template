@@ -134,11 +134,11 @@ class _$UserResponseModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UserResponseModelCopyWith<$Res>
+abstract class _$$_UserResponseModelCopyWith<$Res>
     implements $UserResponseModelCopyWith<$Res> {
-  factory _$UserResponseModelCopyWith(
-          _UserResponseModel value, $Res Function(_UserResponseModel) then) =
-      __$UserResponseModelCopyWithImpl<$Res>;
+  factory _$$_UserResponseModelCopyWith(_$_UserResponseModel value,
+          $Res Function(_$_UserResponseModel) then) =
+      __$$_UserResponseModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? id,
@@ -157,15 +157,15 @@ abstract class _$UserResponseModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$UserResponseModelCopyWithImpl<$Res>
+class __$$_UserResponseModelCopyWithImpl<$Res>
     extends _$UserResponseModelCopyWithImpl<$Res>
-    implements _$UserResponseModelCopyWith<$Res> {
-  __$UserResponseModelCopyWithImpl(
-      _UserResponseModel _value, $Res Function(_UserResponseModel) _then)
-      : super(_value, (v) => _then(v as _UserResponseModel));
+    implements _$$_UserResponseModelCopyWith<$Res> {
+  __$$_UserResponseModelCopyWithImpl(
+      _$_UserResponseModel _value, $Res Function(_$_UserResponseModel) _then)
+      : super(_value, (v) => _then(v as _$_UserResponseModel));
 
   @override
-  _UserResponseModel get _value => super._value as _UserResponseModel;
+  _$_UserResponseModel get _value => super._value as _$_UserResponseModel;
 
   @override
   $Res call({
@@ -178,7 +178,7 @@ class __$UserResponseModelCopyWithImpl<$Res>
     Object? website = freezed,
     Object? compaany = freezed,
   }) {
-    return _then(_UserResponseModel(
+    return _then(_$_UserResponseModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -257,7 +257,7 @@ class _$_UserResponseModel implements _UserResponseModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserResponseModel &&
+            other is _$_UserResponseModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.username, username) &&
@@ -283,8 +283,9 @@ class _$_UserResponseModel implements _UserResponseModel {
 
   @JsonKey(ignore: true)
   @override
-  _$UserResponseModelCopyWith<_UserResponseModel> get copyWith =>
-      __$UserResponseModelCopyWithImpl<_UserResponseModel>(this, _$identity);
+  _$$_UserResponseModelCopyWith<_$_UserResponseModel> get copyWith =>
+      __$$_UserResponseModelCopyWithImpl<_$_UserResponseModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -324,6 +325,6 @@ abstract class _UserResponseModel implements UserResponseModel {
   UserCompanyModel? get compaany => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserResponseModelCopyWith<_UserResponseModel> get copyWith =>
+  _$$_UserResponseModelCopyWith<_$_UserResponseModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

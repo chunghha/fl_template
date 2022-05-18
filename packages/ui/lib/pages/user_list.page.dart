@@ -8,7 +8,7 @@ import '../shared/my_scaffold.dart';
 import '../widgets/user_list_view.widget.dart';
 
 class UserListPage extends ConsumerWidget {
-  const UserListPage({Key? key}) : super(key: key);
+  const UserListPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

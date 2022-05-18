@@ -7,7 +7,7 @@ import '../constants/current_page.enum.dart';
 import '../shared/my_scaffold.dart';
 
 class ErrorPage extends StatelessWidget {
-  const ErrorPage(this.error, {Key? key}) : super(key: key);
+  const ErrorPage(this.error, {super.key});
   final Exception? error;
 
   @override

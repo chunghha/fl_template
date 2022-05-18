@@ -3,7 +3,7 @@ import 'package:model/model.dart';
 import 'package:theme/theme.dart';
 
 class UserListView extends StatelessWidget {
-  const UserListView(this.users, {Key? key}) : super(key: key);
+  const UserListView(this.users, {super.key});
 
   final List<UserResponseModel> users;
 

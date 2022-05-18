@@ -10,7 +10,7 @@ import '../widgets/password_input.widget.dart';
 import '../widgets/token_input.widget.dart';
 
 class LoginPage extends HookConsumerWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -37,7 +37,7 @@ class LoginPage extends HookConsumerWidget {
               child: Center(
                 child: Column(
                   children: [
-                    Container(
+                    ColoredBox(
                       color: baseColor,
                       child: Column(
                         children: [

@@ -7,7 +7,7 @@ import '../constants/current_page.enum.dart';
 import '../shared/my_scaffold.dart';
 
 class CounterPage extends HookWidget {
-  const CounterPage({Key? key}) : super(key: key);
+  const CounterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
