@@ -49,17 +49,20 @@ class PagesAppState extends ConsumerState<TemplateApp> with RestorationMixin {
 
   @override
   Widget build(BuildContext context) {
+    final goRouter = ref.watch(appRouter);
+
     // * go_router ought to have a Listenable to complete routing
     ref.listen(
       refreshListenableProvider,
-      (_, __) => ref.watch(appRouter).refresh(),
+      (_, __) => goRouter.refresh(),
     );
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      routeInformationParser: ref.watch(appRouter).routeInformationParser,
-      routerDelegate: ref.watch(appRouter).routerDelegate,
+      routeInformationProvider: goRouter.routeInformationProvider,
+      routeInformationParser: goRouter.routeInformationParser,
+      routerDelegate: goRouter.routerDelegate,
       restorationScopeId: 'app',
     );
   }
