@@ -31,23 +31,26 @@ const highlightOverlayColor = Color(0xFF3a384a);
 // text styles
 const textStyleFontPkg = TextStyle(package: 'theme');
 
-final TextStyle defaultTextStyle = GoogleFonts.ibmPlexSans(
+final TextStyle defaultTextStyle = GoogleFonts.inter(
   color: textColor,
   fontSize: 14,
   fontWeight: FontWeight.normal,
-  textStyle: textStyleFontPkg,
 );
 
-final TextStyle baseHeaderStyle = GoogleFonts.ibmPlexSerif(
+final TextStyle baseHeaderStyle = GoogleFonts.poppins(
   color: surfaceColor,
   fontSize: 14,
   fontWeight: FontWeight.bold,
-  textStyle: textStyleFontPkg,
 );
 
-final TextStyle baseTextStyle = GoogleFonts.ibmPlexSans(
+final TextStyle baseTextStyle = GoogleFonts.inter(
   color: baseColor,
   fontSize: 14,
   fontWeight: FontWeight.normal,
-  textStyle: textStyleFontPkg,
+);
+
+final TextStyle titleStyle = GoogleFonts.poppins(
+  color: textColor,
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
 );

@@ -36,6 +36,8 @@ class MyNavigator extends ConsumerWidget {
 
     return BottomNavigationBar(
       backgroundColor: baseColor,
+      selectedItemColor: roseColor,
+      unselectedItemColor: pineColor,
       items: _navbarItems(),
       currentIndex: currentPageProvider.last.currentPage.toIndex(),
       onTap: (index) {

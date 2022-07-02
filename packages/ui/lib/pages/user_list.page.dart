@@ -18,7 +18,10 @@ class UserListPage extends ConsumerWidget {
       backgroundColor: surfaceColor,
       appBar: AppBar(
         backgroundColor: overlayColor,
-        title: Text(CURRENT_PAGE.userlist.toTitle()),
+        title: Text(
+          CURRENT_PAGE.userlist.toTitle(),
+          style: titleStyle,
+        ),
       ),
       body: users.when(
         data: UserListView.new,

@@ -42,7 +42,10 @@ class FireflyPage extends HookWidget {
       backgroundColor: surfaceColor,
       appBar: AppBar(
         backgroundColor: loveColor,
-        title: Text(CURRENT_PAGE.firefly.toTitle()),
+        title: Text(
+          CURRENT_PAGE.firefly.toTitle(),
+          style: titleStyle,
+        ),
       ),
       body: SafeArea(
         child: Column(

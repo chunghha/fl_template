@@ -17,7 +17,10 @@ class CounterPage extends HookWidget {
       backgroundColor: surfaceColor,
       appBar: AppBar(
         backgroundColor: pineColor,
-        title: Text(CURRENT_PAGE.counter.toTitle()),
+        title: Text(
+          CURRENT_PAGE.counter.toTitle(),
+          style: titleStyle,
+        ),
       ),
       body: Center(
         child: Column(

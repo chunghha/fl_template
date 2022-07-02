@@ -1,2 +1,2 @@
-const int bottomNavbarItemCount = 3;
+const int bottomNavbarItemCount = 4;
 const String qPlaceHolderBaseUrl = 'placeHolderBaseUrl';
