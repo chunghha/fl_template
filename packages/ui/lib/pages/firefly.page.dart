@@ -59,15 +59,9 @@ class FireflyPage extends HookWidget {
                     color: loveColor,
                     child: ClipRect(
                       child: BackdropFilter(
-                        filter: ImageFilter.compose(
-                          outer: ImageFilter.blur(
-                            sigmaX: numbers.value.toDouble(),
-                            sigmaY: numbers.value.toDouble() * 2,
-                          ),
-                          inner: const ColorFilter.mode(
-                            pineColor,
-                            BlendMode.overlay,
-                          ),
+                        filter: ImageFilter.blur(
+                          sigmaX: numbers.value.toDouble(),
+                          sigmaY: numbers.value.toDouble() * 2,
                         ),
                         child: CustomPaint(
                           painter: FireFlyPainter(
