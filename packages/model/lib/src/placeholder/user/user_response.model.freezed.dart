@@ -308,21 +308,21 @@ abstract class _UserResponseModel implements UserResponseModel {
       _$_UserResponseModel.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get username => throw _privateConstructorUsedError;
+  String? get username;
   @override
-  String? get email => throw _privateConstructorUsedError;
+  String? get email;
   @override
-  UserAddressModel? get address => throw _privateConstructorUsedError;
+  UserAddressModel? get address;
   @override
-  String? get phone => throw _privateConstructorUsedError;
+  String? get phone;
   @override
-  String? get website => throw _privateConstructorUsedError;
+  String? get website;
   @override
-  UserCompanyModel? get compaany => throw _privateConstructorUsedError;
+  UserCompanyModel? get compaany;
   @override
   @JsonKey(ignore: true)
   _$$_UserResponseModelCopyWith<_$_UserResponseModel> get copyWith =>

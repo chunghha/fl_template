@@ -231,15 +231,15 @@ abstract class _UserAddressModel implements UserAddressModel {
       _$_UserAddressModel.fromJson;
 
   @override
-  String? get street => throw _privateConstructorUsedError;
+  String? get street;
   @override
-  String? get suite => throw _privateConstructorUsedError;
+  String? get suite;
   @override
-  String? get city => throw _privateConstructorUsedError;
+  String? get city;
   @override
-  String? get zip => throw _privateConstructorUsedError;
+  String? get zip;
   @override
-  UserGeoModel? get geo => throw _privateConstructorUsedError;
+  UserGeoModel? get geo;
   @override
   @JsonKey(ignore: true)
   _$$_UserAddressModelCopyWith<_$_UserAddressModel> get copyWith =>

@@ -155,9 +155,9 @@ abstract class _UserGeoModel implements UserGeoModel {
       _$_UserGeoModel.fromJson;
 
   @override
-  String? get lat => throw _privateConstructorUsedError;
+  String? get lat;
   @override
-  String? get lng => throw _privateConstructorUsedError;
+  String? get lng;
   @override
   @JsonKey(ignore: true)
   _$$_UserGeoModelCopyWith<_$_UserGeoModel> get copyWith =>

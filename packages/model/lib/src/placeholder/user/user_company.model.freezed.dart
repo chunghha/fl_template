@@ -174,11 +174,11 @@ abstract class _UserCompanyModel implements UserCompanyModel {
       _$_UserCompanyModel.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get catchPhrase => throw _privateConstructorUsedError;
+  String? get catchPhrase;
   @override
-  String? get bs => throw _privateConstructorUsedError;
+  String? get bs;
   @override
   @JsonKey(ignore: true)
   _$$_UserCompanyModelCopyWith<_$_UserCompanyModel> get copyWith =>
