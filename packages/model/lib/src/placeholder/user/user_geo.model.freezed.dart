@@ -143,7 +143,9 @@ class _$_UserGeoModel implements _UserGeoModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserGeoModelToJson(this);
+    return _$$_UserGeoModelToJson(
+      this,
+    );
   }
 }
 
