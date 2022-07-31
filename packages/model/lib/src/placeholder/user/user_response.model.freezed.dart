@@ -289,7 +289,9 @@ class _$_UserResponseModel implements _UserResponseModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserResponseModelToJson(this);
+    return _$$_UserResponseModelToJson(
+      this,
+    );
   }
 }
 

@@ -215,7 +215,9 @@ class _$_UserAddressModel implements _UserAddressModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserAddressModelToJson(this);
+    return _$$_UserAddressModelToJson(
+      this,
+    );
   }
 }
 

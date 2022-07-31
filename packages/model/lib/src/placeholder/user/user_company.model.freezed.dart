@@ -160,7 +160,9 @@ class _$_UserCompanyModel implements _UserCompanyModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserCompanyModelToJson(this);
+    return _$$_UserCompanyModelToJson(
+      this,
+    );
   }
 }
 
