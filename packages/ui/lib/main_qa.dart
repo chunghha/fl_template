@@ -1,6 +1,6 @@
 import 'main.dart' as app;
 
-void main() {
+Future<void> main() async {
   // ignore: avoid_redundant_argument_values
-  app.main(env: 'qa');
+  await app.main(env: 'qa');
 }

@@ -35,7 +35,7 @@ class LoginButton extends HookConsumerWidget {
         },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(defaultPadding),
-          primary: pineColor,
+          backgroundColor: pineColor,
         ),
         child: const Text(
           'LOG IN',

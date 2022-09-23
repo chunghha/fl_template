@@ -10,41 +10,41 @@ environment:
 dependencies:
   adapter:
     path: ../adapter
-  animations: ^2.0.3
-  basic_utils: ^4.4.3
-  cached_network_image: ^3.2.1
+  animations: ^2.0.5
+  basic_utils: ^5.3.0
+  cached_network_image: ^3.2.2
   cupertino_icons: ^1.0.5
-  device_info_plus: ^4.0.1
-  email_validator: ^2.1.16
-  equatable: ^2.0.3
-  fl_chart: ^0.55.0
+  device_info_plus: ^4.1.2
+  email_validator: ^2.1.17
+  equatable: ^2.0.5
+  fl_chart: ^0.55.2
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.0.2
   flutter_hooks: ^0.18.5
-  flutter_secure_storage: ^5.0.2
+  flutter_secure_storage: ^6.0.0
   gap: ^2.0.0
-  go_router: ^4.2.2
+  go_router: ^5.0.1
   golden_toolkit: ^0.13.0
-  google_maps_flutter: ^2.1.10
+  google_maps_flutter: ^2.2.0
   hooks_riverpod: ^2.0.0-dev.9
   intl: ^0.17.0
   logger: ^1.1.0
   model:
     path: ../model
-  package_info_plus: ^1.4.3
+  package_info_plus: ^1.4.3+1
   shared_preferences: ^2.0.12
   theme:
     path: ../theme
   url_launcher: ^6.1.5
 
 dev_dependencies:
-  all_lint_rules_community: ^0.0.12
-  build_runner: ^2.2.0
-  flutter_launcher_icons: ^0.9.3
+  all_lint_rules_community: ^0.0.14
+  build_runner: ^2.2.1
+  flutter_launcher_icons: ^0.10.0
   flutter_test:
     sdk: flutter
-  mockito: ^5.3.0
+  mockito: ^5.3.2
 
 # The following section is specific to Flutter.
 flutter:

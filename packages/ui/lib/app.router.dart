@@ -16,7 +16,6 @@ final appRouter = Provider<GoRouter>(
   (ref) => GoRouter(
     debugLogDiagnostics: kDebugMode,
     restorationScopeId: 'router',
-    urlPathStrategy: UrlPathStrategy.path,
     routes: [
       GoRoute(
         path: CURRENT_PAGE.counter.toPath(),
@@ -40,7 +39,7 @@ final appRouter = Provider<GoRouter>(
       ),
     ],
     errorBuilder: (context, state) => ErrorPage(state.error),
-    redirect: (state) {
+    redirect: (context, state) {
       // * hack: https://github.com/rrousselGit/river_pod/issues/815
       // * use ref.read() instead of ref.watch()
       final authStateProvider = ref.read(authStateNotifierPod);

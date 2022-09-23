@@ -13,6 +13,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
   AuthNotifier(StateNotifierProviderRef ref)
       : _authRepository = ref.read(_authRepositoryPod),
         super(const AuthState.loading()) {
+    // ignore: discarded_futures
     checkUserAuth();
   }
 

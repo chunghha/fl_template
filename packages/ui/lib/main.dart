@@ -60,9 +60,7 @@ class PagesAppState extends ConsumerState<TemplateApp> with RestorationMixin {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      routeInformationProvider: goRouter.routeInformationProvider,
-      routeInformationParser: goRouter.routeInformationParser,
-      routerDelegate: goRouter.routerDelegate,
+      routerConfig: goRouter,
       restorationScopeId: 'app',
     );
   }
