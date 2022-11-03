@@ -36,7 +36,8 @@ mixin _$UserAddressModel {
 abstract class $UserAddressModelCopyWith<$Res> {
   factory $UserAddressModelCopyWith(
           UserAddressModel value, $Res Function(UserAddressModel) then) =
-      _$UserAddressModelCopyWithImpl<$Res>;
+      _$UserAddressModelCopyWithImpl<$Res, UserAddressModel>;
+  @useResult
   $Res call(
       {String? street,
       String? suite,
@@ -48,14 +49,16 @@ abstract class $UserAddressModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserAddressModelCopyWithImpl<$Res>
+class _$UserAddressModelCopyWithImpl<$Res, $Val extends UserAddressModel>
     implements $UserAddressModelCopyWith<$Res> {
   _$UserAddressModelCopyWithImpl(this._value, this._then);
 
-  final UserAddressModel _value;
   // ignore: unused_field
-  final $Res Function(UserAddressModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? street = freezed,
@@ -65,37 +68,38 @@ class _$UserAddressModelCopyWithImpl<$Res>
     Object? geo = freezed,
   }) {
     return _then(_value.copyWith(
-      street: street == freezed
+      street: freezed == street
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
               as String?,
-      suite: suite == freezed
+      suite: freezed == suite
           ? _value.suite
           : suite // ignore: cast_nullable_to_non_nullable
               as String?,
-      city: city == freezed
+      city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String?,
-      zip: zip == freezed
+      zip: freezed == zip
           ? _value.zip
           : zip // ignore: cast_nullable_to_non_nullable
               as String?,
-      geo: geo == freezed
+      geo: freezed == geo
           ? _value.geo
           : geo // ignore: cast_nullable_to_non_nullable
               as UserGeoModel?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UserGeoModelCopyWith<$Res>? get geo {
     if (_value.geo == null) {
       return null;
     }
 
     return $UserGeoModelCopyWith<$Res>(_value.geo!, (value) {
-      return _then(_value.copyWith(geo: value));
+      return _then(_value.copyWith(geo: value) as $Val);
     });
   }
 }
@@ -107,6 +111,7 @@ abstract class _$$_UserAddressModelCopyWith<$Res>
           _$_UserAddressModel value, $Res Function(_$_UserAddressModel) then) =
       __$$_UserAddressModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? street,
       String? suite,
@@ -120,15 +125,13 @@ abstract class _$$_UserAddressModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_UserAddressModelCopyWithImpl<$Res>
-    extends _$UserAddressModelCopyWithImpl<$Res>
+    extends _$UserAddressModelCopyWithImpl<$Res, _$_UserAddressModel>
     implements _$$_UserAddressModelCopyWith<$Res> {
   __$$_UserAddressModelCopyWithImpl(
       _$_UserAddressModel _value, $Res Function(_$_UserAddressModel) _then)
-      : super(_value, (v) => _then(v as _$_UserAddressModel));
+      : super(_value, _then);
 
-  @override
-  _$_UserAddressModel get _value => super._value as _$_UserAddressModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? street = freezed,
@@ -138,23 +141,23 @@ class __$$_UserAddressModelCopyWithImpl<$Res>
     Object? geo = freezed,
   }) {
     return _then(_$_UserAddressModel(
-      street: street == freezed
+      street: freezed == street
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
               as String?,
-      suite: suite == freezed
+      suite: freezed == suite
           ? _value.suite
           : suite // ignore: cast_nullable_to_non_nullable
               as String?,
-      city: city == freezed
+      city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String?,
-      zip: zip == freezed
+      zip: freezed == zip
           ? _value.zip
           : zip // ignore: cast_nullable_to_non_nullable
               as String?,
-      geo: geo == freezed
+      geo: freezed == geo
           ? _value.geo
           : geo // ignore: cast_nullable_to_non_nullable
               as UserGeoModel?,
@@ -191,25 +194,20 @@ class _$_UserAddressModel implements _UserAddressModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserAddressModel &&
-            const DeepCollectionEquality().equals(other.street, street) &&
-            const DeepCollectionEquality().equals(other.suite, suite) &&
-            const DeepCollectionEquality().equals(other.city, city) &&
-            const DeepCollectionEquality().equals(other.zip, zip) &&
-            const DeepCollectionEquality().equals(other.geo, geo));
+            (identical(other.street, street) || other.street == street) &&
+            (identical(other.suite, suite) || other.suite == suite) &&
+            (identical(other.city, city) || other.city == city) &&
+            (identical(other.zip, zip) || other.zip == zip) &&
+            (identical(other.geo, geo) || other.geo == geo));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(street),
-      const DeepCollectionEquality().hash(suite),
-      const DeepCollectionEquality().hash(city),
-      const DeepCollectionEquality().hash(zip),
-      const DeepCollectionEquality().hash(geo));
+  int get hashCode => Object.hash(runtimeType, street, suite, city, zip, geo);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserAddressModelCopyWith<_$_UserAddressModel> get copyWith =>
       __$$_UserAddressModelCopyWithImpl<_$_UserAddressModel>(this, _$identity);
 

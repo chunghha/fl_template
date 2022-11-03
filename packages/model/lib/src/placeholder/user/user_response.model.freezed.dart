@@ -39,7 +39,8 @@ mixin _$UserResponseModel {
 abstract class $UserResponseModelCopyWith<$Res> {
   factory $UserResponseModelCopyWith(
           UserResponseModel value, $Res Function(UserResponseModel) then) =
-      _$UserResponseModelCopyWithImpl<$Res>;
+      _$UserResponseModelCopyWithImpl<$Res, UserResponseModel>;
+  @useResult
   $Res call(
       {int? id,
       String? name,
@@ -55,14 +56,16 @@ abstract class $UserResponseModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserResponseModelCopyWithImpl<$Res>
+class _$UserResponseModelCopyWithImpl<$Res, $Val extends UserResponseModel>
     implements $UserResponseModelCopyWith<$Res> {
   _$UserResponseModelCopyWithImpl(this._value, this._then);
 
-  final UserResponseModel _value;
   // ignore: unused_field
-  final $Res Function(UserResponseModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -75,60 +78,62 @@ class _$UserResponseModelCopyWithImpl<$Res>
     Object? compaany = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      address: address == freezed
+      address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as UserAddressModel?,
-      phone: phone == freezed
+      phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String?,
-      website: website == freezed
+      website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
               as String?,
-      compaany: compaany == freezed
+      compaany: freezed == compaany
           ? _value.compaany
           : compaany // ignore: cast_nullable_to_non_nullable
               as UserCompanyModel?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UserAddressModelCopyWith<$Res>? get address {
     if (_value.address == null) {
       return null;
     }
 
     return $UserAddressModelCopyWith<$Res>(_value.address!, (value) {
-      return _then(_value.copyWith(address: value));
+      return _then(_value.copyWith(address: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UserCompanyModelCopyWith<$Res>? get compaany {
     if (_value.compaany == null) {
       return null;
     }
 
     return $UserCompanyModelCopyWith<$Res>(_value.compaany!, (value) {
-      return _then(_value.copyWith(compaany: value));
+      return _then(_value.copyWith(compaany: value) as $Val);
     });
   }
 }
@@ -140,6 +145,7 @@ abstract class _$$_UserResponseModelCopyWith<$Res>
           $Res Function(_$_UserResponseModel) then) =
       __$$_UserResponseModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? id,
       String? name,
@@ -158,15 +164,13 @@ abstract class _$$_UserResponseModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_UserResponseModelCopyWithImpl<$Res>
-    extends _$UserResponseModelCopyWithImpl<$Res>
+    extends _$UserResponseModelCopyWithImpl<$Res, _$_UserResponseModel>
     implements _$$_UserResponseModelCopyWith<$Res> {
   __$$_UserResponseModelCopyWithImpl(
       _$_UserResponseModel _value, $Res Function(_$_UserResponseModel) _then)
-      : super(_value, (v) => _then(v as _$_UserResponseModel));
+      : super(_value, _then);
 
-  @override
-  _$_UserResponseModel get _value => super._value as _$_UserResponseModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -179,35 +183,35 @@ class __$$_UserResponseModelCopyWithImpl<$Res>
     Object? compaany = freezed,
   }) {
     return _then(_$_UserResponseModel(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      address: address == freezed
+      address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as UserAddressModel?,
-      phone: phone == freezed
+      phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String?,
-      website: website == freezed
+      website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
               as String?,
-      compaany: compaany == freezed
+      compaany: freezed == compaany
           ? _value.compaany
           : compaany // ignore: cast_nullable_to_non_nullable
               as UserCompanyModel?,
@@ -258,31 +262,26 @@ class _$_UserResponseModel implements _UserResponseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserResponseModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.address, address) &&
-            const DeepCollectionEquality().equals(other.phone, phone) &&
-            const DeepCollectionEquality().equals(other.website, website) &&
-            const DeepCollectionEquality().equals(other.compaany, compaany));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.website, website) || other.website == website) &&
+            (identical(other.compaany, compaany) ||
+                other.compaany == compaany));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(address),
-      const DeepCollectionEquality().hash(phone),
-      const DeepCollectionEquality().hash(website),
-      const DeepCollectionEquality().hash(compaany));
+  int get hashCode => Object.hash(runtimeType, id, name, username, email,
+      address, phone, website, compaany);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserResponseModelCopyWith<_$_UserResponseModel> get copyWith =>
       __$$_UserResponseModelCopyWithImpl<_$_UserResponseModel>(
           this, _$identity);

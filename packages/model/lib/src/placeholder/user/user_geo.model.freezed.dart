@@ -33,33 +33,37 @@ mixin _$UserGeoModel {
 abstract class $UserGeoModelCopyWith<$Res> {
   factory $UserGeoModelCopyWith(
           UserGeoModel value, $Res Function(UserGeoModel) then) =
-      _$UserGeoModelCopyWithImpl<$Res>;
+      _$UserGeoModelCopyWithImpl<$Res, UserGeoModel>;
+  @useResult
   $Res call({String? lat, String? lng});
 }
 
 /// @nodoc
-class _$UserGeoModelCopyWithImpl<$Res> implements $UserGeoModelCopyWith<$Res> {
+class _$UserGeoModelCopyWithImpl<$Res, $Val extends UserGeoModel>
+    implements $UserGeoModelCopyWith<$Res> {
   _$UserGeoModelCopyWithImpl(this._value, this._then);
 
-  final UserGeoModel _value;
   // ignore: unused_field
-  final $Res Function(UserGeoModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? lat = freezed,
     Object? lng = freezed,
   }) {
     return _then(_value.copyWith(
-      lat: lat == freezed
+      lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as String?,
-      lng: lng == freezed
+      lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -70,31 +74,30 @@ abstract class _$$_UserGeoModelCopyWith<$Res>
           _$_UserGeoModel value, $Res Function(_$_UserGeoModel) then) =
       __$$_UserGeoModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? lat, String? lng});
 }
 
 /// @nodoc
 class __$$_UserGeoModelCopyWithImpl<$Res>
-    extends _$UserGeoModelCopyWithImpl<$Res>
+    extends _$UserGeoModelCopyWithImpl<$Res, _$_UserGeoModel>
     implements _$$_UserGeoModelCopyWith<$Res> {
   __$$_UserGeoModelCopyWithImpl(
       _$_UserGeoModel _value, $Res Function(_$_UserGeoModel) _then)
-      : super(_value, (v) => _then(v as _$_UserGeoModel));
+      : super(_value, _then);
 
-  @override
-  _$_UserGeoModel get _value => super._value as _$_UserGeoModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? lat = freezed,
     Object? lng = freezed,
   }) {
     return _then(_$_UserGeoModel(
-      lat: lat == freezed
+      lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as String?,
-      lng: lng == freezed
+      lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -125,19 +128,17 @@ class _$_UserGeoModel implements _UserGeoModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserGeoModel &&
-            const DeepCollectionEquality().equals(other.lat, lat) &&
-            const DeepCollectionEquality().equals(other.lng, lng));
+            (identical(other.lat, lat) || other.lat == lat) &&
+            (identical(other.lng, lng) || other.lng == lng));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(lat),
-      const DeepCollectionEquality().hash(lng));
+  int get hashCode => Object.hash(runtimeType, lat, lng);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserGeoModelCopyWith<_$_UserGeoModel> get copyWith =>
       __$$_UserGeoModelCopyWithImpl<_$_UserGeoModel>(this, _$identity);
 
