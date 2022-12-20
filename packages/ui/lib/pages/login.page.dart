@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:theme/theme.dart';
 
@@ -56,13 +57,14 @@ class LoginPage extends HookConsumerWidget {
                                     controller: passwordController,
                                   ),
                                   TokenInput(controller: tokenController),
+                                  const Gap(defaultPadding / 8),
                                   LoginButton(
                                     emailController: emailController,
                                     passwordController: passwordController,
                                     tokenController: tokenController,
                                   ),
-                                  const SizedBox(
-                                    height: defaultPadding / 8,
+                                  const Gap(
+                                    defaultPadding / 8,
                                   )
                                 ],
                               ),
