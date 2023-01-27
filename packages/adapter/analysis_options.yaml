@@ -3,17 +3,12 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
-  errors: 
+  errors:
     fixme: ignore
     hack: ignore
     todo: ignore
 linter:
   rules:
-    newline-before-return: true
-    no-boolean-literal-compare: true
-    no-empty-block: true
-    no-equal-then-else: true
-    prefer-conditional-expressions: true
     prefer_const_constructors: false
     prefer_final_locals: true
     prefer_relative_imports: true

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_as
+
 import 'package:adapter/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:model/model.dart';
@@ -14,6 +16,7 @@ class PlaceHolderRepository {
 
     try {
       final users = <UserResponseModel>[];
+      // ignore: avoid_dynamic_calls
       final res = (await placeHolderAdapter.getUsers()).data as List;
 
       for (final user in res) {

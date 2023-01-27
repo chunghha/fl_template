@@ -31,7 +31,15 @@ class LoginButton extends HookConsumerWidget {
                 tokenController.text,
               );
 
-          goForward(context: context, ref: ref, pageToGo: CURRENT_PAGE.counter);
+          if (context.mounted) {
+            goForward(
+              context: context,
+              ref: ref,
+              pageToGo: CURRENT_PAGE.counter,
+            );
+          } else {
+            return;
+          }
         },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(defaultPadding),
