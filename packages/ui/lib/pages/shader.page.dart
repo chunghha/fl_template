@@ -1,32 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:graphx/graphx.dart';
 import 'package:theme/theme.dart';
 
 import '../constants/current_page.enum.dart';
 import '../shared/my_scaffold.dart';
+import 'worley_shader_scene.dart';
 
-class MapPage extends StatelessWidget {
-  const MapPage({super.key});
+class ShaderPage extends StatelessWidget {
+  const ShaderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
       backgroundColor: surfaceColor,
       appBar: AppBar(
-        backgroundColor: irisColor,
+        backgroundColor: pineColor,
         title: Text(
-          CURRENT_PAGE.map.toTitle(),
+          CURRENT_PAGE.shader.toTitle(),
           style: titleStyle,
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'We need a map here.',
-            ),
-          ],
-        ),
+      body: SceneBuilderWidget(
+        builder: () => SceneController(front: WorleyShadersScene()),
+        autoSize: true,
       ),
     );
   }

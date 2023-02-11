@@ -15,32 +15,33 @@ dependencies:
   basic_utils: ^5.4.2
   cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.5
-  device_info_plus: ^8.0.0
+  device_info_plus: ^8.1.0
   email_validator: ^2.1.17
   equatable: ^2.0.5
-  fl_chart: ^0.55.2
+  fl_chart: ^0.60.0
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.0.2
   flutter_hooks: ^0.18.5
-  flutter_secure_storage: ^7.0.1
+  flutter_secure_storage: ^8.0.0
   gap: ^2.0.1
-  go_router: ^6.0.1
+  go_router: ^6.0.6
   golden_toolkit: ^0.14.0
   google_maps_flutter: ^2.2.3
+  graphx: ^1.0.9
   hooks_riverpod: ^2.1.3
   intl: ^0.18.0
   logger: ^1.1.0
   model:
     path: ../model
-  package_info_plus: ^3.0.2
+  package_info_plus: ^3.0.3
   shared_preferences: ^2.0.17
   theme:
     path: ../theme
-  url_launcher: ^6.1.8
+  url_launcher: ^6.1.9
 
 dev_dependencies:
-  all_lint_rules_community: ^0.0.21
+  all_lint_rules_community: ^0.0.25
   build_runner: ^2.3.3
   flutter_launcher_icons: ^0.11.0
   flutter_test:
@@ -50,6 +51,8 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   uses-material-design: true
+  shaders:
+    - shaders/worley.frag
   assets:
     - assets/config/
     - google_fonts/

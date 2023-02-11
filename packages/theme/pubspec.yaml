@@ -11,10 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  google_fonts: ^3.0.1
+  google_fonts: ^4.0.3
 
 dev_dependencies:
-  all_lint_rules_community: ^0.0.22
+  all_lint_rules_community: ^0.0.25
   flutter_test:
     sdk: flutter
 
