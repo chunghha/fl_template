@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  dio: ^4.0.6
+  diox: ^5.0.0
   intl: ^0.18.0
   logger: ^1.1.0
   model:
@@ -22,5 +22,8 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.1
-  http_mock_adapter: ^0.3.3
+  http_mock_adapter:
+    git:
+      url: https://github.com/chunghha/http-mock-adapter.git
+      ref: diox # branch name
   test: ^1.19.5

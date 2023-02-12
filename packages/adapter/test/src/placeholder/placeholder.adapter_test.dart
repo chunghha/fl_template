@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:adapter/adapter.dart';
-import 'package:dio/dio.dart';
+import 'package:diox/diox.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 

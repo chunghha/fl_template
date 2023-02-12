@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:adapter/adapter.dart';
-import 'package:dio/dio.dart';
+import 'package:diox/diox.dart';
 
 Future<void> _fetchUsers() async {
   final adapter = PlaceHolderAdapter(

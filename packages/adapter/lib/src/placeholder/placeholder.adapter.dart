@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+import 'package:diox/diox.dart';
 
 import '../shared/adapter.interceptor.dart';
 
