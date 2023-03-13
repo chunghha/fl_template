@@ -39,16 +39,16 @@ scripts:
   test:dart:
     run: melos exec  -c 1 --fail-fast -- "\$MELOS_ROOT_PATH/scripts/coverage.sh"
     description: Run Dart tests for a specific package in this project.
-    select-package:
+    packageFilters:
       flutter: false
-      dir-exists: test
+      dirExists: test
 
   test:flutter:
     run: melos exec --dir-exists="test" -c 1 --fail-fast -- "flutter test --coverage --exclude-tags=golden"
     description: Run Flutter tests for a specific package in this project.
-    select-package:
+    packageFilters:
       flutter: true
-      dir-exists: test
+      dirExists: test
 
   test:genhtml_lcov:
     run: melos exec --file-exists="coverage/lcov.info" -c 1 --fail-fast -- "genhtml coverage/lcov.info -o coverage"
@@ -57,9 +57,9 @@ scripts:
   test:golden:
     run: melos exec --dir-exists="test" -c 1 --fail-fast -- "flutter test --update-goldens --tags=golden"
     description: Run Flutter golden tests for a specific package in this project.
-    select-package:
+    packageFilters:
       flutter: true
-      dir-exists: test
+      dirExists: test
 
   check:all:
     run: melos run clean:ui && melos run analyze && melos run format && melos run generate && melos run test
@@ -76,13 +76,13 @@ scripts:
   clean:
     run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter clean"
     description: Run `flutter clean' for ios release to delete the build/ and .dart_tool/ directories.
-    select-package:
+    packageFilters:
       flutter: true
-      dir-exists: build
+      dirExists: build
 
   clean:ui:
     run: melos exec --file-exists="pubspec.yaml" -c 1 --fail-fast -- "flutter clean"
     description: Run `flutter clean' for ios release to delete the build/ and .dart_tool/ directories.
-    select-package:
+    packageFilters:
       flutter: true
-      dir-exists: assets/config/
+      dirExists: assets/config/

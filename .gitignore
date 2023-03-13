@@ -52,3 +52,5 @@ packages/**/coverage.lcov
 packages/**/build
 packages/model/coverage.lcov
 packages/model/coverage/**/*.vm.json
+
+pubspec_overrides.yaml
