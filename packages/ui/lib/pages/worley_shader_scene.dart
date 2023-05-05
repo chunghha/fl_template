@@ -75,7 +75,7 @@ class WorleyShadersScene extends GSprite {
       }
 
       for (final box in boxes) {
-        // ignore: avoid_as, cast_nullable_to_non_nullable
+        // ignore: cast_nullable_to_non_nullable
         final rnd = box.userData as double;
         box.scale += rnd * .5;
         final ease = rnd.abs() / 4;

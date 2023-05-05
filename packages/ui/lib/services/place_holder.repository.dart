@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_as
-
 import 'package:adapter/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:model/model.dart';
