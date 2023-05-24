@@ -13,13 +13,13 @@ import 'router.helper.dart';
 class MyNavigator extends ConsumerWidget {
   const MyNavigator({super.key});
 
-  List<BottomNavigationBarItem> _navbarItems() {
-    final items = <BottomNavigationBarItem>[];
+  List<NavigationDestination> _navbarItems() {
+    final items = <NavigationDestination>[];
 
     CURRENT_PAGE.values.asMap().forEach((k, v) {
       if (k < bottomNavbarItemCount) {
         items.add(
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: v.toIcon(),
             label: StringUtils.capitalize(v.name),
           ),
@@ -34,13 +34,12 @@ class MyNavigator extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final currentPageProvider = ref.watch(currentPagePod);
 
-    return BottomNavigationBar(
-      backgroundColor: baseColor,
-      selectedItemColor: roseColor,
-      unselectedItemColor: pineColor,
-      items: _navbarItems(),
-      currentIndex: currentPageProvider.last.currentPage.toIndex(),
-      onTap: (index) {
+    return NavigationBar(
+      backgroundColor: surfaceColor,
+      destinations: _navbarItems(),
+      indicatorColor: subtleColor,
+      selectedIndex: currentPageProvider.last.currentPage.toIndex(),
+      onDestinationSelected: (index) {
         if (kDebugMode) {
           print('|.. _index onTap: $index');
         }
