@@ -12,8 +12,8 @@ Future<void> _fetchUsers() async {
     final response = await adapter.getUsers();
     // ignore: avoid_print
     print(response);
-  } on DioError catch (dioError) {
-    throw AdapterException.fromDioError(dioError);
+  } on DioException catch (dioException) {
+    throw AdapterException.fromDioError(dioException);
   } finally {
     adapter.close();
   }

@@ -24,7 +24,7 @@ class AdapterInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     // ignore: avoid_dynamic_calls
     _logger.e(
       'ERROR[${err.response?.statusCode}]::PATH: ${err.requestOptions.path}',

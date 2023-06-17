@@ -22,8 +22,8 @@ class PlaceHolderRepository {
       }
 
       return users;
-    } on DioError catch (dioError) {
-      throw AdapterException.fromDioError(dioError);
+    } on DioException catch (dioException) {
+      throw AdapterException.fromDioError(dioException);
     }
   }
 }

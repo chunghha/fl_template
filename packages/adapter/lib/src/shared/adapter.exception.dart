@@ -3,32 +3,32 @@ import 'package:dio/dio.dart';
 class AdapterException implements Exception {
   late String message;
 
-  AdapterException.fromDioError(DioError dioError) {
-    switch (dioError.type) {
-      case DioErrorType.cancel:
+  AdapterException.fromDioError(DioException dioException) {
+    switch (dioException.type) {
+      case DioExceptionType.cancel:
         message = 'Request to API cancelled';
         break;
-      case DioErrorType.connectionTimeout:
+      case DioExceptionType.connectionTimeout:
         message = 'Connection timeout with API';
         break;
-      case DioErrorType.connectionError:
+      case DioExceptionType.connectionError:
         message = 'Connection failed';
         break;
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.receiveTimeout:
         message = 'Receive timeout in connection with API';
         break;
-      case DioErrorType.badResponse:
-        message = _handleError(dioError.response?.statusCode);
+      case DioExceptionType.badResponse:
+        message = _handleError(dioException.response?.statusCode);
         break;
-      case DioErrorType.sendTimeout:
+      case DioExceptionType.sendTimeout:
         message = 'Send timeout in connection with API';
         break;
-      case DioErrorType.unknown:
+      case DioExceptionType.unknown:
       default:
         message = 'Dio Unknown exception occured';
         break;
     }
-    message += ':\n  $dioError';
+    message += ':\n  $dioException';
   }
 
   String _handleError(int? statusCode) {
