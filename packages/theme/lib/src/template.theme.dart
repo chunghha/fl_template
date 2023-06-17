@@ -31,25 +31,25 @@ const highlightOverlayColor = Color(0xFF3a384a);
 // text styles
 const textStyleFontPkg = TextStyle(package: 'theme');
 
-final TextStyle defaultTextStyle = GoogleFonts.inter(
+final TextStyle defaultTextStyle = GoogleFonts.nunitoSans(
   color: textColor,
   fontSize: 14,
   fontWeight: FontWeight.normal,
 );
 
-final TextStyle baseHeaderStyle = GoogleFonts.poppins(
+final TextStyle baseHeaderStyle = GoogleFonts.tienne(
   color: surfaceColor,
   fontSize: 14,
   fontWeight: FontWeight.bold,
 );
 
-final TextStyle baseTextStyle = GoogleFonts.inter(
+final TextStyle baseTextStyle = GoogleFonts.nunitoSans(
   color: baseColor,
   fontSize: 14,
   fontWeight: FontWeight.normal,
 );
 
-final TextStyle titleStyle = GoogleFonts.poppins(
+final TextStyle titleStyle = GoogleFonts.tienne(
   color: textColor,
   fontSize: 18,
   fontWeight: FontWeight.bold,

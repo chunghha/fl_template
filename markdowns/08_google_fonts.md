@@ -28,13 +28,13 @@ flutter:
 // text styles
 const textStyleFontPkg = TextStyle(package: 'theme');
 
-final TextStyle defaultTextStyle = GoogleFonts.inter(
+final TextStyle defaultTextStyle = GoogleFonts.nunitoSans
   color: textColor,
   fontSize: 14,
   fontWeight: FontWeight.normal,
 );
 ```
-*Inter font package in the example above*
+*Nunito Sans font package in the example above*
 
 - Register the fonts (refer to *utils/register_fonts.dart*)
 
