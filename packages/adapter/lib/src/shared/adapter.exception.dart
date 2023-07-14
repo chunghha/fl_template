@@ -7,22 +7,16 @@ class AdapterException implements Exception {
     switch (dioException.type) {
       case DioExceptionType.cancel:
         message = 'Request to API cancelled';
-        break;
       case DioExceptionType.connectionTimeout:
         message = 'Connection timeout with API';
-        break;
       case DioExceptionType.connectionError:
         message = 'Connection failed';
-        break;
       case DioExceptionType.receiveTimeout:
         message = 'Receive timeout in connection with API';
-        break;
       case DioExceptionType.badResponse:
         message = _handleError(dioException.response?.statusCode);
-        break;
       case DioExceptionType.sendTimeout:
         message = 'Send timeout in connection with API';
-        break;
       case DioExceptionType.unknown:
       default:
         message = 'Dio Unknown exception occured';
