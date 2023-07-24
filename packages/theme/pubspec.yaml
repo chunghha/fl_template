@@ -14,7 +14,7 @@ dependencies:
   google_fonts: ^5.1.0
 
 dev_dependencies:
-  all_lint_rules_community: ^0.0.31
+  all_lint_rules_community: ^0.0.37
   flutter_test:
     sdk: flutter
 

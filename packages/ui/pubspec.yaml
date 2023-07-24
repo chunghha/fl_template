@@ -12,7 +12,7 @@ dependencies:
     path: ../adapter
   animated_path: ^0.0.2
   animations: ^2.0.7
-  basic_utils: ^5.6.0
+  basic_utils: ^5.6.1
   cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.5
   device_info_plus: 9.0.2
@@ -25,7 +25,7 @@ dependencies:
   flutter_hooks: ^0.18.6
   flutter_secure_storage: ^8.0.0
   gap: ^3.0.1
-  go_router: ^9.0.3
+  go_router: ^10.0.0
   golden_toolkit: ^0.15.0
   graphx:
     git:
@@ -43,7 +43,7 @@ dependencies:
   url_launcher: ^6.1.12
 
 dev_dependencies:
-  all_lint_rules_community: ^0.0.31
+  all_lint_rules_community: ^0.0.37
   build_runner: ^2.4.6
   flutter_launcher_icons: ^0.13.1
   flutter_test:

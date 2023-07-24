@@ -43,7 +43,7 @@ final appRouter = Provider<GoRouter>(
       // * hack: https://github.com/rrousselGit/river_pod/issues/815
       // * use ref.read() instead of ref.watch()
       final authStateProvider = ref.read(authStateNotifierPod);
-      final routeToPath = state.location;
+      final routeToPath = state.uri.toString();
 
       if (kDebugMode) {
         print('|.. _routeToPath: $routeToPath');
