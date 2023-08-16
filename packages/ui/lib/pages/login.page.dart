@@ -65,7 +65,7 @@ class LoginPage extends HookConsumerWidget {
                                   ),
                                   const Gap(
                                     defaultPadding / 8,
-                                  )
+                                  ),
                                 ],
                               ),
                             ),

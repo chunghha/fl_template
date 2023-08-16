@@ -16,7 +16,7 @@ class CurrentPageNotifier extends StateNotifier<List<CurrentPageState>> {
             CurrentPageState(
               CURRENT_PAGE.counter,
               CURRENT_PAGE.counter.toPath(),
-            )
+            ),
           ],
         );
 
