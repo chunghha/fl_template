@@ -139,11 +139,11 @@ class _$UserResponseModelCopyWithImpl<$Res, $Val extends UserResponseModel>
 }
 
 /// @nodoc
-abstract class _$$_UserResponseModelCopyWith<$Res>
+abstract class _$$UserResponseModelImplCopyWith<$Res>
     implements $UserResponseModelCopyWith<$Res> {
-  factory _$$_UserResponseModelCopyWith(_$_UserResponseModel value,
-          $Res Function(_$_UserResponseModel) then) =
-      __$$_UserResponseModelCopyWithImpl<$Res>;
+  factory _$$UserResponseModelImplCopyWith(_$UserResponseModelImpl value,
+          $Res Function(_$UserResponseModelImpl) then) =
+      __$$UserResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -163,11 +163,11 @@ abstract class _$$_UserResponseModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserResponseModelCopyWithImpl<$Res>
-    extends _$UserResponseModelCopyWithImpl<$Res, _$_UserResponseModel>
-    implements _$$_UserResponseModelCopyWith<$Res> {
-  __$$_UserResponseModelCopyWithImpl(
-      _$_UserResponseModel _value, $Res Function(_$_UserResponseModel) _then)
+class __$$UserResponseModelImplCopyWithImpl<$Res>
+    extends _$UserResponseModelCopyWithImpl<$Res, _$UserResponseModelImpl>
+    implements _$$UserResponseModelImplCopyWith<$Res> {
+  __$$UserResponseModelImplCopyWithImpl(_$UserResponseModelImpl _value,
+      $Res Function(_$UserResponseModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -182,7 +182,7 @@ class __$$_UserResponseModelCopyWithImpl<$Res>
     Object? website = freezed,
     Object? compaany = freezed,
   }) {
-    return _then(_$_UserResponseModel(
+    return _then(_$UserResponseModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -221,8 +221,8 @@ class __$$_UserResponseModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserResponseModel implements _UserResponseModel {
-  _$_UserResponseModel(
+class _$UserResponseModelImpl implements _UserResponseModel {
+  _$UserResponseModelImpl(
       {this.id,
       this.name,
       this.username,
@@ -232,8 +232,8 @@ class _$_UserResponseModel implements _UserResponseModel {
       this.website,
       this.compaany});
 
-  factory _$_UserResponseModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserResponseModelFromJson(json);
+  factory _$UserResponseModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserResponseModelImplFromJson(json);
 
   @override
   final int? id;
@@ -258,10 +258,10 @@ class _$_UserResponseModel implements _UserResponseModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserResponseModel &&
+            other is _$UserResponseModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.username, username) ||
@@ -282,13 +282,13 @@ class _$_UserResponseModel implements _UserResponseModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserResponseModelCopyWith<_$_UserResponseModel> get copyWith =>
-      __$$_UserResponseModelCopyWithImpl<_$_UserResponseModel>(
+  _$$UserResponseModelImplCopyWith<_$UserResponseModelImpl> get copyWith =>
+      __$$UserResponseModelImplCopyWithImpl<_$UserResponseModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserResponseModelToJson(
+    return _$$UserResponseModelImplToJson(
       this,
     );
   }
@@ -303,10 +303,10 @@ abstract class _UserResponseModel implements UserResponseModel {
       final UserAddressModel? address,
       final String? phone,
       final String? website,
-      final UserCompanyModel? compaany}) = _$_UserResponseModel;
+      final UserCompanyModel? compaany}) = _$UserResponseModelImpl;
 
   factory _UserResponseModel.fromJson(Map<String, dynamic> json) =
-      _$_UserResponseModel.fromJson;
+      _$UserResponseModelImpl.fromJson;
 
   @override
   int? get id;
@@ -326,6 +326,6 @@ abstract class _UserResponseModel implements UserResponseModel {
   UserCompanyModel? get compaany;
   @override
   @JsonKey(ignore: true)
-  _$$_UserResponseModelCopyWith<_$_UserResponseModel> get copyWith =>
+  _$$UserResponseModelImplCopyWith<_$UserResponseModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -74,22 +74,22 @@ class _$UserCompanyModelCopyWithImpl<$Res, $Val extends UserCompanyModel>
 }
 
 /// @nodoc
-abstract class _$$_UserCompanyModelCopyWith<$Res>
+abstract class _$$UserCompanyModelImplCopyWith<$Res>
     implements $UserCompanyModelCopyWith<$Res> {
-  factory _$$_UserCompanyModelCopyWith(
-          _$_UserCompanyModel value, $Res Function(_$_UserCompanyModel) then) =
-      __$$_UserCompanyModelCopyWithImpl<$Res>;
+  factory _$$UserCompanyModelImplCopyWith(_$UserCompanyModelImpl value,
+          $Res Function(_$UserCompanyModelImpl) then) =
+      __$$UserCompanyModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, String? catchPhrase, String? bs});
 }
 
 /// @nodoc
-class __$$_UserCompanyModelCopyWithImpl<$Res>
-    extends _$UserCompanyModelCopyWithImpl<$Res, _$_UserCompanyModel>
-    implements _$$_UserCompanyModelCopyWith<$Res> {
-  __$$_UserCompanyModelCopyWithImpl(
-      _$_UserCompanyModel _value, $Res Function(_$_UserCompanyModel) _then)
+class __$$UserCompanyModelImplCopyWithImpl<$Res>
+    extends _$UserCompanyModelCopyWithImpl<$Res, _$UserCompanyModelImpl>
+    implements _$$UserCompanyModelImplCopyWith<$Res> {
+  __$$UserCompanyModelImplCopyWithImpl(_$UserCompanyModelImpl _value,
+      $Res Function(_$UserCompanyModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_UserCompanyModelCopyWithImpl<$Res>
     Object? catchPhrase = freezed,
     Object? bs = freezed,
   }) {
-    return _then(_$_UserCompanyModel(
+    return _then(_$UserCompanyModelImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -118,11 +118,11 @@ class __$$_UserCompanyModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserCompanyModel implements _UserCompanyModel {
-  _$_UserCompanyModel({this.name, this.catchPhrase, this.bs});
+class _$UserCompanyModelImpl implements _UserCompanyModel {
+  _$UserCompanyModelImpl({this.name, this.catchPhrase, this.bs});
 
-  factory _$_UserCompanyModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserCompanyModelFromJson(json);
+  factory _$UserCompanyModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserCompanyModelImplFromJson(json);
 
   @override
   final String? name;
@@ -137,10 +137,10 @@ class _$_UserCompanyModel implements _UserCompanyModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserCompanyModel &&
+            other is _$UserCompanyModelImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.catchPhrase, catchPhrase) ||
                 other.catchPhrase == catchPhrase) &&
@@ -154,12 +154,13 @@ class _$_UserCompanyModel implements _UserCompanyModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserCompanyModelCopyWith<_$_UserCompanyModel> get copyWith =>
-      __$$_UserCompanyModelCopyWithImpl<_$_UserCompanyModel>(this, _$identity);
+  _$$UserCompanyModelImplCopyWith<_$UserCompanyModelImpl> get copyWith =>
+      __$$UserCompanyModelImplCopyWithImpl<_$UserCompanyModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserCompanyModelToJson(
+    return _$$UserCompanyModelImplToJson(
       this,
     );
   }
@@ -169,10 +170,10 @@ abstract class _UserCompanyModel implements UserCompanyModel {
   factory _UserCompanyModel(
       {final String? name,
       final String? catchPhrase,
-      final String? bs}) = _$_UserCompanyModel;
+      final String? bs}) = _$UserCompanyModelImpl;
 
   factory _UserCompanyModel.fromJson(Map<String, dynamic> json) =
-      _$_UserCompanyModel.fromJson;
+      _$UserCompanyModelImpl.fromJson;
 
   @override
   String? get name;
@@ -182,6 +183,6 @@ abstract class _UserCompanyModel implements UserCompanyModel {
   String? get bs;
   @override
   @JsonKey(ignore: true)
-  _$$_UserCompanyModelCopyWith<_$_UserCompanyModel> get copyWith =>
+  _$$UserCompanyModelImplCopyWith<_$UserCompanyModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

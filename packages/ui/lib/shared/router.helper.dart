@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../constants/current_page.enum.dart';
-import '../pods/curret_page.pod.dart';
+import '../pods/current_page.pod.dart';
 import '../states/current_page.state.dart';
 
 String _getSubloc(String path) {

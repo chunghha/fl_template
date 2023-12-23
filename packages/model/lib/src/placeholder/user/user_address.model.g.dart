@@ -6,8 +6,9 @@ part of 'user_address.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserAddressModel _$$_UserAddressModelFromJson(Map<String, dynamic> json) =>
-    _$_UserAddressModel(
+_$UserAddressModelImpl _$$UserAddressModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UserAddressModelImpl(
       street: json['street'] as String?,
       suite: json['suite'] as String?,
       city: json['city'] as String?,
@@ -17,7 +18,8 @@ _$_UserAddressModel _$$_UserAddressModelFromJson(Map<String, dynamic> json) =>
           : UserGeoModel.fromJson(json['geo'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_UserAddressModelToJson(_$_UserAddressModel instance) =>
+Map<String, dynamic> _$$UserAddressModelImplToJson(
+        _$UserAddressModelImpl instance) =>
     <String, dynamic>{
       'street': instance.street,
       'suite': instance.suite,

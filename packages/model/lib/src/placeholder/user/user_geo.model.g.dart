@@ -6,13 +6,13 @@ part of 'user_geo.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserGeoModel _$$_UserGeoModelFromJson(Map<String, dynamic> json) =>
-    _$_UserGeoModel(
+_$UserGeoModelImpl _$$UserGeoModelImplFromJson(Map<String, dynamic> json) =>
+    _$UserGeoModelImpl(
       lat: json['lat'] as String?,
       lng: json['lng'] as String?,
     );
 
-Map<String, dynamic> _$$_UserGeoModelToJson(_$_UserGeoModel instance) =>
+Map<String, dynamic> _$$UserGeoModelImplToJson(_$UserGeoModelImpl instance) =>
     <String, dynamic>{
       'lat': instance.lat,
       'lng': instance.lng,

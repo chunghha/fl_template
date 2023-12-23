@@ -68,22 +68,22 @@ class _$UserGeoModelCopyWithImpl<$Res, $Val extends UserGeoModel>
 }
 
 /// @nodoc
-abstract class _$$_UserGeoModelCopyWith<$Res>
+abstract class _$$UserGeoModelImplCopyWith<$Res>
     implements $UserGeoModelCopyWith<$Res> {
-  factory _$$_UserGeoModelCopyWith(
-          _$_UserGeoModel value, $Res Function(_$_UserGeoModel) then) =
-      __$$_UserGeoModelCopyWithImpl<$Res>;
+  factory _$$UserGeoModelImplCopyWith(
+          _$UserGeoModelImpl value, $Res Function(_$UserGeoModelImpl) then) =
+      __$$UserGeoModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? lat, String? lng});
 }
 
 /// @nodoc
-class __$$_UserGeoModelCopyWithImpl<$Res>
-    extends _$UserGeoModelCopyWithImpl<$Res, _$_UserGeoModel>
-    implements _$$_UserGeoModelCopyWith<$Res> {
-  __$$_UserGeoModelCopyWithImpl(
-      _$_UserGeoModel _value, $Res Function(_$_UserGeoModel) _then)
+class __$$UserGeoModelImplCopyWithImpl<$Res>
+    extends _$UserGeoModelCopyWithImpl<$Res, _$UserGeoModelImpl>
+    implements _$$UserGeoModelImplCopyWith<$Res> {
+  __$$UserGeoModelImplCopyWithImpl(
+      _$UserGeoModelImpl _value, $Res Function(_$UserGeoModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_UserGeoModelCopyWithImpl<$Res>
     Object? lat = freezed,
     Object? lng = freezed,
   }) {
-    return _then(_$_UserGeoModel(
+    return _then(_$UserGeoModelImpl(
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$_UserGeoModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserGeoModel implements _UserGeoModel {
-  _$_UserGeoModel({this.lat, this.lng});
+class _$UserGeoModelImpl implements _UserGeoModel {
+  _$UserGeoModelImpl({this.lat, this.lng});
 
-  factory _$_UserGeoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserGeoModelFromJson(json);
+  factory _$UserGeoModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserGeoModelImplFromJson(json);
 
   @override
   final String? lat;
@@ -124,10 +124,10 @@ class _$_UserGeoModel implements _UserGeoModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserGeoModel &&
+            other is _$UserGeoModelImpl &&
             (identical(other.lat, lat) || other.lat == lat) &&
             (identical(other.lng, lng) || other.lng == lng));
   }
@@ -139,12 +139,12 @@ class _$_UserGeoModel implements _UserGeoModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserGeoModelCopyWith<_$_UserGeoModel> get copyWith =>
-      __$$_UserGeoModelCopyWithImpl<_$_UserGeoModel>(this, _$identity);
+  _$$UserGeoModelImplCopyWith<_$UserGeoModelImpl> get copyWith =>
+      __$$UserGeoModelImplCopyWithImpl<_$UserGeoModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserGeoModelToJson(
+    return _$$UserGeoModelImplToJson(
       this,
     );
   }
@@ -152,10 +152,10 @@ class _$_UserGeoModel implements _UserGeoModel {
 
 abstract class _UserGeoModel implements UserGeoModel {
   factory _UserGeoModel({final String? lat, final String? lng}) =
-      _$_UserGeoModel;
+      _$UserGeoModelImpl;
 
   factory _UserGeoModel.fromJson(Map<String, dynamic> json) =
-      _$_UserGeoModel.fromJson;
+      _$UserGeoModelImpl.fromJson;
 
   @override
   String? get lat;
@@ -163,6 +163,6 @@ abstract class _UserGeoModel implements UserGeoModel {
   String? get lng;
   @override
   @JsonKey(ignore: true)
-  _$$_UserGeoModelCopyWith<_$_UserGeoModel> get copyWith =>
+  _$$UserGeoModelImplCopyWith<_$UserGeoModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,7 +6,7 @@ import 'package:theme/theme.dart';
 
 import '../constants/constants.dart';
 import '../constants/current_page.enum.dart';
-import '../pods/curret_page.pod.dart';
+import '../pods/current_page.pod.dart';
 import '../states/current_page.state.dart';
 import 'router.helper.dart';
 

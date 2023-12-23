@@ -105,11 +105,11 @@ class _$UserAddressModelCopyWithImpl<$Res, $Val extends UserAddressModel>
 }
 
 /// @nodoc
-abstract class _$$_UserAddressModelCopyWith<$Res>
+abstract class _$$UserAddressModelImplCopyWith<$Res>
     implements $UserAddressModelCopyWith<$Res> {
-  factory _$$_UserAddressModelCopyWith(
-          _$_UserAddressModel value, $Res Function(_$_UserAddressModel) then) =
-      __$$_UserAddressModelCopyWithImpl<$Res>;
+  factory _$$UserAddressModelImplCopyWith(_$UserAddressModelImpl value,
+          $Res Function(_$UserAddressModelImpl) then) =
+      __$$UserAddressModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,11 +124,11 @@ abstract class _$$_UserAddressModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserAddressModelCopyWithImpl<$Res>
-    extends _$UserAddressModelCopyWithImpl<$Res, _$_UserAddressModel>
-    implements _$$_UserAddressModelCopyWith<$Res> {
-  __$$_UserAddressModelCopyWithImpl(
-      _$_UserAddressModel _value, $Res Function(_$_UserAddressModel) _then)
+class __$$UserAddressModelImplCopyWithImpl<$Res>
+    extends _$UserAddressModelCopyWithImpl<$Res, _$UserAddressModelImpl>
+    implements _$$UserAddressModelImplCopyWith<$Res> {
+  __$$UserAddressModelImplCopyWithImpl(_$UserAddressModelImpl _value,
+      $Res Function(_$UserAddressModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -140,7 +140,7 @@ class __$$_UserAddressModelCopyWithImpl<$Res>
     Object? zip = freezed,
     Object? geo = freezed,
   }) {
-    return _then(_$_UserAddressModel(
+    return _then(_$UserAddressModelImpl(
       street: freezed == street
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
@@ -167,11 +167,12 @@ class __$$_UserAddressModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserAddressModel implements _UserAddressModel {
-  _$_UserAddressModel({this.street, this.suite, this.city, this.zip, this.geo});
+class _$UserAddressModelImpl implements _UserAddressModel {
+  _$UserAddressModelImpl(
+      {this.street, this.suite, this.city, this.zip, this.geo});
 
-  factory _$_UserAddressModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserAddressModelFromJson(json);
+  factory _$UserAddressModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserAddressModelImplFromJson(json);
 
   @override
   final String? street;
@@ -190,10 +191,10 @@ class _$_UserAddressModel implements _UserAddressModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserAddressModel &&
+            other is _$UserAddressModelImpl &&
             (identical(other.street, street) || other.street == street) &&
             (identical(other.suite, suite) || other.suite == suite) &&
             (identical(other.city, city) || other.city == city) &&
@@ -208,12 +209,13 @@ class _$_UserAddressModel implements _UserAddressModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserAddressModelCopyWith<_$_UserAddressModel> get copyWith =>
-      __$$_UserAddressModelCopyWithImpl<_$_UserAddressModel>(this, _$identity);
+  _$$UserAddressModelImplCopyWith<_$UserAddressModelImpl> get copyWith =>
+      __$$UserAddressModelImplCopyWithImpl<_$UserAddressModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserAddressModelToJson(
+    return _$$UserAddressModelImplToJson(
       this,
     );
   }
@@ -225,10 +227,10 @@ abstract class _UserAddressModel implements UserAddressModel {
       final String? suite,
       final String? city,
       final String? zip,
-      final UserGeoModel? geo}) = _$_UserAddressModel;
+      final UserGeoModel? geo}) = _$UserAddressModelImpl;
 
   factory _UserAddressModel.fromJson(Map<String, dynamic> json) =
-      _$_UserAddressModel.fromJson;
+      _$UserAddressModelImpl.fromJson;
 
   @override
   String? get street;
@@ -242,6 +244,6 @@ abstract class _UserAddressModel implements UserAddressModel {
   UserGeoModel? get geo;
   @override
   @JsonKey(ignore: true)
-  _$$_UserAddressModelCopyWith<_$_UserAddressModel> get copyWith =>
+  _$$UserAddressModelImplCopyWith<_$UserAddressModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
