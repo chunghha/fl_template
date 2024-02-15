@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
+import 'package:rfw/formats.dart';
+import 'package:rfw/rfw.dart';
 import 'package:theme/theme.dart';
 
 import '../constants/current_page.enum.dart';
@@ -12,6 +14,36 @@ class CounterPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final counter = useState(0);
+
+    // Just to show how to use rfw
+    RemoteWidget getRemoteWidget() {
+      const coreName = LibraryName(<String>['core', 'widgets']);
+      const mainName = LibraryName(<String>['main']);
+
+      final remoteWidgets = parseLibraryFile('''
+    import core.widgets;
+    widget root = Container(
+      color: 0xFF003547,
+      child: Text(text: ["Hello, ", data.greet.name, "!"], textDirection: "ltr"),
+    );
+  ''');
+
+      final runtime = Runtime();
+      runtime.update(coreName, createCoreWidgets());
+      runtime.update(mainName, remoteWidgets);
+
+      final data = DynamicContent();
+      data.update('greet', <String, Object>{'name': 'RFW'});
+
+      return RemoteWidget(
+        runtime: runtime,
+        data: data,
+        widget: const FullyQualifiedWidgetName(mainName, 'root'),
+        onEvent: (name, arguments) {
+          debugPrint('user triggered event "$name" with data: $arguments');
+        },
+      );
+    }
 
     return MyScaffold(
       backgroundColor: surfaceColor,
@@ -44,6 +76,8 @@ class CounterPage extends HookWidget {
                 size: defaultIconSize,
               ),
             ),
+            const Gap(defaultPadding),
+            getRemoteWidget(),
           ],
         ),
       ),
