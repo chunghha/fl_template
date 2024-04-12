@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:rfw/formats.dart';
 import 'package:rfw/rfw.dart';
+import 'package:signals/signals_flutter.dart';
 import 'package:theme/theme.dart';
 
 import '../constants/current_page.enum.dart';
@@ -14,6 +15,12 @@ class CounterPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final counter = useState(0);
+
+    final signalCounter = signal(0);
+
+    void incrementSignalCounter() {
+      signalCounter.value++;
+    }
 
     // Just to show how to use rfw
     RemoteWidget getRemoteWidget() {
@@ -69,6 +76,7 @@ class CounterPage extends HookWidget {
             TextButton(
               onPressed: () {
                 counter.value++;
+                incrementSignalCounter();
               },
               child: const Icon(
                 Icons.plus_one,
@@ -78,6 +86,11 @@ class CounterPage extends HookWidget {
             ),
             const Gap(defaultPadding),
             getRemoteWidget(),
+            const Gap(defaultPadding),
+            Text(
+              '$signalCounter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
           ],
         ),
       ),

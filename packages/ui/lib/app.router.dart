@@ -7,6 +7,7 @@ import 'pages/counter.page.dart';
 import 'pages/error.page.dart';
 import 'pages/firefly.page.dart';
 import 'pages/login.page.dart';
+import 'pages/terminal.page.dart';
 import 'pages/user_list.page.dart';
 import 'pods/auth.pod.dart';
 import 'states/auth.state.dart';
@@ -23,6 +24,10 @@ final appRouter = Provider<GoRouter>(
       GoRoute(
         path: CURRENT_PAGE.firefly.toPath(),
         builder: (context, state) => const FireflyPage(),
+      ),
+      GoRoute(
+        path: CURRENT_PAGE.terminal.toPath(),
+        builder: (context, state) => const TerminalPage(),
       ),
       GoRoute(
         path: CURRENT_PAGE.userlist.toPath(),

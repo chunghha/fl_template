@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-enum CURRENT_PAGE { counter, firefly, userlist, login }
+enum CURRENT_PAGE { counter, firefly, terminal, userlist, login }
 
 extension CurrentPageExtension on CURRENT_PAGE {
   Icon toIcon() {
@@ -10,6 +10,8 @@ extension CurrentPageExtension on CURRENT_PAGE {
         return const Icon(Icons.home);
       case CURRENT_PAGE.firefly:
         return const Icon(Icons.fireplace);
+      case CURRENT_PAGE.terminal:
+        return const Icon(Icons.terminal);
       case CURRENT_PAGE.userlist:
         return const Icon(Icons.people);
       case CURRENT_PAGE.login:
@@ -23,8 +25,10 @@ extension CurrentPageExtension on CURRENT_PAGE {
         return 0;
       case CURRENT_PAGE.firefly:
         return 1;
-      case CURRENT_PAGE.userlist:
+      case CURRENT_PAGE.terminal:
         return 2;
+      case CURRENT_PAGE.userlist:
+        return 3;
       case CURRENT_PAGE.login:
         return -1;
     }
@@ -36,6 +40,8 @@ extension CurrentPageExtension on CURRENT_PAGE {
         return '/';
       case CURRENT_PAGE.firefly:
         return '/firefly';
+      case CURRENT_PAGE.terminal:
+        return '/terminal';
       case CURRENT_PAGE.userlist:
         return '/userlist';
       case CURRENT_PAGE.login:
@@ -49,6 +55,8 @@ extension CurrentPageExtension on CURRENT_PAGE {
         return 'Counter';
       case CURRENT_PAGE.firefly:
         return 'Crazy Firefly';
+      case CURRENT_PAGE.terminal:
+        return 'Terminal';
       case CURRENT_PAGE.userlist:
         return 'Users';
       case CURRENT_PAGE.login:
