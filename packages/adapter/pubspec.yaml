@@ -5,15 +5,15 @@ publish_to: none
 version: 0.4.0
 
 environment:
-  sdk: ">=3.3.3 <4.0.0"
+  sdk: ">=3.4.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  dio: ^5.4.1
-  intl: ^0.18.1
-  logger: ^2.1.0
+  dio: ^5.4.3+1
+  intl: ^0.19.0
+  logger: ^2.3.0
   model:
     path: ../model
 
@@ -21,6 +21,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
   http_mock_adapter: ^0.6.1
-  test: ^1.24.9
+  test: ^1.25.2

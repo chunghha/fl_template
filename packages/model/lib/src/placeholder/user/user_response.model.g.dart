@@ -9,7 +9,7 @@ part of 'user_response.model.dart';
 _$UserResponseModelImpl _$$UserResponseModelImplFromJson(
         Map<String, dynamic> json) =>
     _$UserResponseModelImpl(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       username: json['username'] as String?,
       email: json['email'] as String?,
